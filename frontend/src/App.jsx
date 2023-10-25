@@ -11,6 +11,7 @@ function App() {
         <p>Hello Vite + React !</p>
 
         <Counter />
+        <button type="button">load</button>
 
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
