@@ -1,16 +1,9 @@
-import { useState } from "react";
-
 export default function Counter() {
-  const [count, setCount] = useState(0);
-
   return (
-    <p>
-      <button
-        type="button"
-        onClick={() => setCount((oldCount) => oldCount + 1)}
-      >
-        count is: {count}
-      </button>
-    </p>
+    <div>
+      <h1>toto</h1>
+      <p>Legumes</p>
+      <button type="button">Add legumes</button>
+    </div>
   );
 }

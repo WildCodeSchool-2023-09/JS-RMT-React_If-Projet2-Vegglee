@@ -13,6 +13,26 @@ const client = require("../database/client");
 router.get("/items", (req, res) => {
   client
     .query("SELECT * FROM item")
+
+    .then((result) => res.status(200).json(result[0]))
+    .catch((error) => {
+      console.error(error);
+      res.sendStatus(500);
+    });
+});
+
+router.get("/vegetables", (req, res) => {
+  client
+    .query("SELECT * FROM vegetable")
+    .then((result) => res.status(200).json(result[0]))
+    .catch((error) => {
+      console.error(error);
+      res.sendStatus(500);
+    });
+});
+router.get("/legumes", (req, res) => {
+  client
+    .query("SELECT * FROM legumes")
     .then((result) => res.status(200).json(result[0]))
     .catch((error) => {
       console.error(error);
