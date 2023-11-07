@@ -1,22 +1,12 @@
-import { useState } from "react";
-import axios from "axios";
+import { useLoaderData } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const [legumes, setLegumes] = useState([]);
-  const getLegumes = () => {
-    axios
-      .get("http://localhost:3310/api/vegetables")
-      .then((res) => setLegumes(res.data))
-      .catch((err) => console.error(err));
-  };
+  const legumes = useLoaderData();
 
   return (
     <div className="App">
       <h1>Mes bios légumes</h1>
-      <button type="button" onClick={getLegumes}>
-        Affiche les légumes
-      </button>
       {legumes.map((legume) => {
         return (
           <div>

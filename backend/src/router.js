@@ -12,7 +12,7 @@ const router = express.Router();
 // Route to get a list of items
 router.get("/vegetables", (req, res) => {
   client
-    .query("SELECT * FROM vegetable")
+    .query("SELECT * FROM vegetable LIMIT 15")
     .then((result) => {
       res.status(200).json(result[0]);
     })
