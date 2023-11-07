@@ -5,23 +5,23 @@ function App() {
   const legumes = useLoaderData();
 
   return (
-    <div className="App">
+    <div>
       <h1>Mes bios légumes</h1>
       {legumes.map((legume) => {
         return (
-          <div>
-            <img src={legume.image} alt={legume.name} />
-            <h2>{legume.name}</h2>
-            <p>
-              {`prix: `}
-              {legume.price}
-              {` Euros`}
-            </p>
+          <div className="cardCtn">
+            <div className="legumesCard">
+              <img src={legume.image} alt={legume.name} />
+              <h2 className="titleOnImage">{legume.name}</h2>
+              <p>
+                prix:
+                {legume.price}0 €
+              </p>
+            </div>
           </div>
         );
       })}
     </div>
   );
 }
-
 export default App;
