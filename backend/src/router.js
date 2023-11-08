@@ -9,7 +9,7 @@ const router = express.Router();
 
 // Import itemControllers module for handling item-related operations
 
-// Route to get a list of items
+// Route to get a list of vegetables
 router.get("/vegetables", (req, res) => {
   client
     .query("SELECT * FROM vegetable LIMIT 15")
