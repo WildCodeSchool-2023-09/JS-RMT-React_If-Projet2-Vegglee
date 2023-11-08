@@ -1,0 +1,64 @@
+.ctnCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legumesCard {
+  text-align: center;
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  box-shadow: -1px -1px 13px 3px rgba(0, 0, 0, 0.28);
+}
+
+.titleCard {
+  font-size: 0;
+}
+.titleOnImageCard {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: -1px -1px 0 #000;
+  /* Ombre en haut-gauche (couleur noire) / 1px -1px 0 #000,
+      / Ombre en haut-droite (couleur noire) / -1px 1px 0 #000,
+      / Ombre en bas-gauche (couleur noire) / 1px 1px 0 #000; / Ombre en bas-droite (couleur noire) */
+}
+
+.imgCard {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px 40px 0px 0px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #555;
+}
+
+@media screen and (min-width: 600px) {
+  .legumesCard {
+    text-align: center;
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    box-shadow: -1px -1px 13px 3px rgba(0, 0, 0, 0.28);
+    transition: transform 0.2s;
+  }
+
+  .legumesCard:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+  }
+}
