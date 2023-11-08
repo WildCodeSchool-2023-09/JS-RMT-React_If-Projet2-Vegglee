@@ -7,20 +7,17 @@ function App() {
   return (
     <div>
       <h1>Mes bios légumes</h1>
-      {legumes.map((legume) => {
-        return (
-          <div className="cardCtn">
+      <div className="cardCtn">
+        {legumes.map((legume) => {
+          return (
             <div className="legumesCard">
               <img src={legume.image} alt={legume.name} />
               <h2 className="titleOnImage">{legume.name}</h2>
-              <p>
-                prix:
-                {legume.price}0 €
-              </p>
+              <p>prix: {legume.price}0 €</p>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
