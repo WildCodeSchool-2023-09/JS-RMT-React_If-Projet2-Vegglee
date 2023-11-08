@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import LegumeCard from "./components/LegumeCard";
 import "./App.css";
 
 function App() {
@@ -7,15 +8,9 @@ function App() {
   return (
     <div>
       <h1>Mes bios légumes</h1>
-      <div className="cardCtn">
+      <div className="ctnCard">
         {legumes.map((legume) => {
-          return (
-            <div className="legumesCard">
-              <img src={legume.image} alt={legume.name} />
-              <h2 className="titleOnImage">{legume.name}</h2>
-              <p>prix: {legume.price}0 €</p>
-            </div>
-          );
+          return <LegumeCard key={legume.id} legume={legume} />;
         })}
       </div>
     </div>

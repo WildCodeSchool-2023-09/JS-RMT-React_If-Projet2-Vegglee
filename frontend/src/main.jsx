@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App />,
     loader: () => {
       return axios
-        .get("http://localhost:3310/api/vegetables")
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/vegetables`)
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
