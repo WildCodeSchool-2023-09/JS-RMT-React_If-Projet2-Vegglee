@@ -6,7 +6,7 @@ function LegumeCard({ legume }) {
     <div className="legumesCard">
       <img className="imgCard" src={legume.image} alt={legume.name} />
       <h2 className="titleOnImageCard">{legume.name}</h2>
-      <p>prix: {legume.price}0 €</p>
+      <p>Prix: {legume.price}0 €</p>
     </div>
   );
 }
