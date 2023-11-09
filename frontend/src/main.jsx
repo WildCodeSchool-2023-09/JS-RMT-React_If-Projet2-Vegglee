@@ -1,9 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+} from "react-router-dom";
 import axios from "axios";
 
 import App from "./App";
+import NosPaniersPage from "./pages/NosPaniersPage";
 
 const router = createBrowserRouter([
   {
@@ -16,12 +22,21 @@ const router = createBrowserRouter([
         .catch((err) => console.error(err));
     },
   },
+  {
+    path: "/nos-paniers",
+    element: <NosPaniersPage />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}>
+      <Routes>
+        <Route path="/nos-paniers" element={<NosPaniersPage />} />
+        <Route path="/" element={<App />} />
+      </Routes>
+    </RouterProvider>
   </React.StrictMode>
 );

@@ -1,20 +1,21 @@
-import { useLoaderData } from "react-router-dom";
-import LegumeCard from "./components/LegumeCard";
-import NosPaniers from "./components/NosPaniers";
 import "./App.css";
+import { Link, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const legumes = useLoaderData();
-
   return (
     <div>
-      <NosPaniers />
-      <h1>Mes bios légumes</h1>
-      <div className="ctnCard">
-        {legumes.map((legume) => {
-          return <LegumeCard key={legume.id} legume={legume} />;
-        })}
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/nos-paniers">Nos Paniers</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
