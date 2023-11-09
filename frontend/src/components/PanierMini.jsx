@@ -1,7 +1,7 @@
 import React from "react";
 
 function PanierMini() {
-  return <div>PanierMini</div>;
+  return <div>Panier mini</div>;
 }
 
 export default PanierMini;

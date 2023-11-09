@@ -78,3 +78,16 @@ FROM vegetable
 ORDER BY RAND()
 LIMIT 5;
 
+CREATE TABLE mini_panier (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL
+);
+
+  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+

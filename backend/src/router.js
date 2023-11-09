@@ -21,6 +21,17 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
+router.get("/mini_panier", (req, res) => {
+  client
+    .query("SELECT * FROM mini_panier LIMIT 15")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;
 // Route to get a specific item by ID
