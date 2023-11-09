@@ -1,0 +1,22 @@
+.searchInput {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .searchContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+  }
+
+  .searchInput {
+    display: block;
+    padding: 0.4rem 8rem;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.33);
+    border: none;
+  }
+}
