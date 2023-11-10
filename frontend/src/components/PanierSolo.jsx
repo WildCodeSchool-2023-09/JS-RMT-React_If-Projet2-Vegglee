@@ -11,7 +11,6 @@ function PanierSolo() {
       <div>
         <h2>Panier solo</h2>
         <p>Prix du panier</p>
-        <button type="button">Voir le panier</button>
       </div>
     </div>
   );

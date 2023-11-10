@@ -7,6 +7,7 @@ import "./NosPaniersPage.css";
 function NosPaniersPage() {
   return (
     <div className="fondPage">
+      <h1 className="titreNosPaniers">Nos Paniers</h1>
       <div className="nosPaniers">
         <PanierSolo />
         <PanierDuo />
