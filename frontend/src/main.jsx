@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
+import VegetableDetail from "./pages/OneVegetable";
+import RecipeDefault from "./pages/RecetteDefaut";
 
 import App from "./App";
 
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/vegetables/:id",
+    element: <VegetableDetail />,
+  },
+  {
+    path: "/api/recette",
+    element: <RecipeDefault />,
   },
 ]);
 
