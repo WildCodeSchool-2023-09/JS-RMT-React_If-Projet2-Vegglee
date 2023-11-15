@@ -6,6 +6,7 @@ import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import App from "./App";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import RecipeDetail from "./pages/OneRecipe";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
+  },
+  {
+    path: "/recettes/:id",
+    element: <RecipeDetail />,
   },
 ]);
 

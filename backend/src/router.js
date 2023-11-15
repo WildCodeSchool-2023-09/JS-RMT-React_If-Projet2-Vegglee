@@ -59,6 +59,22 @@ router.get("/recettes", (req, res) => {
     });
 });
 
+router.get("/recettes/:id", (req, res) => {
+  client
+    .query("SELECT * FROM recipe WHERE id = ?", [req.params.id])
+    .then((result) => {
+      if (result[0].length === 0) {
+        res.status(404).json({ message: "Aucune Recette trouvé avec cet ID" });
+      } else {
+        res.status(200).json(result[0][0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 // Route to get a specific item by ID
 // router.get("/vegetables/:id", itemControllers.read);
 
