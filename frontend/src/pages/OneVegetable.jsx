@@ -19,10 +19,6 @@ function VegetableDetail() {
       });
   }, [id]);
 
-  if (!vegetable) {
-    return null;
-  }
-
   return (
     <div>
       {vegetable && (

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import RecetteCard from "../components/RecetteCard";
+import "./RecettePage.css";
 
-function RecipeDefault() {
+function RecettePage() {
   const [recettes, setRecettes] = useState(null);
 
   useEffect(() => {
@@ -23,10 +24,13 @@ function RecipeDefault() {
 
   return (
     <div>
-      {recettes.map((recette) => (
-        <RecetteCard key={recette.id} recette={recette} />
-      ))}
+      <h1 className="titre">Nos Recettes ! </h1>
+      <div className="container">
+        {recettes.map((recette) => (
+          <RecetteCard key={recette.id} recette={recette} />
+        ))}
+      </div>
     </div>
   );
 }
-export default RecipeDefault;
+export default RecettePage;

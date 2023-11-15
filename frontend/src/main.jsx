@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import VegetableDetail from "./pages/OneVegetable";
-import RecipeDefault from "./pages/RecetteDefaut";
+import RecettePage from "./pages/RecettePage";
 
 import App from "./App";
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/api/recette",
-    element: <RecipeDefault />,
+    element: <RecettePage />,
   },
 ]);
 

@@ -1,11 +1,11 @@
 import React from "react";
+import "./RecetteCard.css";
 
 function RecetteCard({ recette }) {
   return (
-    <div className="legumesCard">
-      <img className="imgCard" src={recette.image} alt={recette.name} />
-      <h2 className="titleOnImageCard">{recette.name}</h2>
-      <p>Prix: {recette.price}0 €</p>
+    <div className="recetteCard">
+      <img className="imgsCard" src={recette.image} alt={recette.name} />
+      <h2 className="titlesOnImageCard">{recette.name}</h2>
     </div>
   );
 }
