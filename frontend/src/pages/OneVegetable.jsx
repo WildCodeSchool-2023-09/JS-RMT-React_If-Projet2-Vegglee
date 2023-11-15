@@ -19,25 +19,21 @@ function VegetableDetail() {
       });
   }, [id]);
 
-  if (!vegetable) {
-    return null;
-  }
-
   return (
     <div>
       {vegetable && (
         <>
-          <img src={vegetable.image} alt={vegetable.name} className="test" />
+          <img src={vegetable.image} alt={vegetable.name} className="bigImg" />
           <div className="rectangle" />
           <div className="separate" />
           <h2 className="name">{vegetable.name}</h2>
           <h2 className="quantity">Quantité: {vegetable.quantityAvailable}</h2>
           <p className="price">Prix: {vegetable.price}0 €</p>
-          <div className="centered-image">
+          <div className="centeredImage">
             <img
               src={vegetable.image}
               alt={vegetable.name}
-              className="imagebas"
+              className="smallImg"
             />
           </div>
           <p className="description">{vegetable.description}</p>

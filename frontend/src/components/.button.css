@@ -14,36 +14,3 @@
   font-weight: bolder;
   font-size: 16px;
 }
-
-.buttonpanier {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  height: 35px;
-  width: 200px;
-  background: #f90;
-  color: white;
-  border: 0;
-  margin: 50px auto 0 auto;
-  bottom: -20px;
-  font-weight: bolder;
-  font-size: 16px;
-}
-.buttonpanier {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  height: 35px;
-  width: 200px;
-  background: #f90;
-  color: white;
-  border: 0;
-  margin: 50px auto 0 auto;
-  bottom: -5px;
-  font-weight: bolder;
-  font-size: 16px;
-}
