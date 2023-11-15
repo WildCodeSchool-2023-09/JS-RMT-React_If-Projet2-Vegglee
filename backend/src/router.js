@@ -19,6 +19,33 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
+router.get("/small-basket", (req, res) => {
+  client
+    .query("SELECT * FROM small-basket  LIMIT 15")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
+router.get("/vegetables/:id", (req, res) => {
+  client
+    .query("SELECT * FROM vegetable WHERE id = ?", [req.params.id])
+    .then((result) => {
+      if (result[0].length === 0) {
+        res.status(404).json({ message: "Aucun légume trouvé avec cet ID" });
+      } else {
+        res.status(200).json(result[0][0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
 
 router.get("/vegetables/:id", (req, res) => {
   client

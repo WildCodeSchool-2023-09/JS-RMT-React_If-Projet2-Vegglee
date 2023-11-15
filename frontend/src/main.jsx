@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import VegetableDetail from "./pages/OneVegetable";
 import RecettePage from "./pages/RecettePage";
-
 import App from "./App";
+import NosPaniersPage from "./pages/NosPaniersPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/api/recette",
     element: <RecettePage />,
+  },
+  {
+    path: "/nos-paniers",
+    element: <NosPaniersPage />,
   },
 ]);
 
