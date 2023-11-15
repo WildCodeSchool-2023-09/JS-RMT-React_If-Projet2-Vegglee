@@ -1,8 +1,10 @@
-.titre {
+.titleRecipe {
   color: green;
+  display: flex;
+  justify-content: center;
 }
 
-.container {
+.containerRecipe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 import VegetableDetail from "./pages/OneVegetable";
-import RecettePage from "./pages/RecettePage";
+import RecipePage from "./pages/RecipePage";
 import App from "./App";
 import NosPaniersPage from "./pages/NosPaniersPage";
 
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <VegetableDetail />,
   },
   {
-    path: "/api/recette",
-    element: <RecettePage />,
+    path: "/api/recettes",
+    element: <RecipePage />,
   },
   {
     path: "/nos-paniers",

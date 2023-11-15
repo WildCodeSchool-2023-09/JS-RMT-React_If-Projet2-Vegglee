@@ -15,7 +15,7 @@
     /* Ombre en bas-gauche (couleur noire) */ 1px 1px 0 #000; /* Ombre en bas-droite (couleur noire) */
 }
 
-.imgsCard {
+.imgRecipeCard {
   max-height: 300px;
   height: 300px;
   width: 300px;
@@ -23,7 +23,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .recetteCard {
+  .recipeCard {
     text-align: center;
     position: relative;
     width: 300px;
@@ -31,7 +31,7 @@
     transition: transform 0.2s;
   }
 
-  .recetteCard:hover {
+  .recipeCard:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
   }

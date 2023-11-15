@@ -47,25 +47,9 @@ router.get("/vegetables/:id", (req, res) => {
     });
 });
 
-router.get("/vegetables/:id", (req, res) => {
-  client
-    .query("SELECT * FROM vegetable WHERE id = ?", [req.params.id])
-    .then((result) => {
-      if (result[0].length === 0) {
-        res.status(404).json({ message: "Aucun légume trouvé avec cet ID" });
-      } else {
-        res.status(200).json(result[0][0]);
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
-});
-
 router.get("/recettes", (req, res) => {
   client
-    .query("SELECT * FROM recette LIMIT 7")
+    .query("SELECT * FROM recipe LIMIT 8")
     .then((result) => {
       res.status(200).json(result[0]);
     })
