@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Paniers.css";
 
 function Panier({ type }) {
@@ -20,13 +21,15 @@ function Panier({ type }) {
   }
 
   return (
-    <div className="panierCard">
-      <img src={imageSrc} alt={`panier de légumes ${type}`} />
-      <div>
-        <h2>{titre}</h2>
-        <p>Prix du panier</p>
+    <Link to={`/panier/${type}`} className="panierCard">
+      <div className="panierCard">
+        <img src={imageSrc} alt={`panier de légumes ${type}`} />
+        <div>
+          <h2>{titre}</h2>
+          <p>Prix du panier</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
