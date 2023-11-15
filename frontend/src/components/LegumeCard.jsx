@@ -27,7 +27,11 @@ function LegumeCard({ searchText }) {
     <div className="ctnCard">
       {filteredVegetables &&
         filteredVegetables.map((vegetable) => (
-          <Link to={`/vegetables/${vegetable.id}`} key={vegetable.id}>
+          <Link
+            className="linkVegetableCard"
+            to={`/vegetables/${vegetable.id}`}
+            key={vegetable.id}
+          >
             <div className="legumesCard">
               <img
                 className="imgCard"

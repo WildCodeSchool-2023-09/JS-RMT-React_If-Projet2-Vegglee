@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
-import VegetableDetail from "./pages/OneVegetable";
-
 import App from "./App";
+import VegetableDetail from "./pages/OneVegetable";
 import NosPaniersPage from "./pages/NosPaniersPage";
 
 const router = createBrowserRouter([
