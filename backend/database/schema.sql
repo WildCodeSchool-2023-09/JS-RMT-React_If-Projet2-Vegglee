@@ -68,21 +68,59 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (49,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Arroches','Arroches En mélange de couleurs','Atriplex hortensis','Ce mélange propose diverses variétés rustiques de la famille des Chénopodiacées aux feuilles de différentes couleurs qui se consomment crues ou cuites comme des épinards.','Aucun conseil particulier',3.3,30);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (50,NULL,'Pastèques','Pastèque Astrakhanski','Citrullus lanatus','Cette variété, précoce et idéale pour toutes les conditions de culture, produit des fruits arrondis de 30 cm de diamètre très sucrés à l''épiderme lisse, vert foncé moucheté de vert clair. Leur chair, ferme et juteuse, offre une délicieuse saveur.','La pastèque contient près de 92 % d’eau ainsi que peu de fibres, ce qui la rend plus digeste pour les personnes aux intestins sensibles. Riche en lycopène, un antioxydant qui lui donne sa couleur roug [...]',1.6,27);
 
-CREATE TABLE petit_panier AS
-SELECT id, image, species, name, latin, description, advice, price, 500 AS weight
-FROM vegetable
-ORDER BY RAND()
-LIMIT 5;
 
-CREATE TABLE mini_panier (
+
+CREATE TABLE solo_basket (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
     quantity_or_weight VARCHAR(20) NOT NULL
 );
 
-  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+  INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
+   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
+   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
+   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
+   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
+   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+
+   CREATE TABLE duo_basket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL
+);
+  INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Carottes', '750g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Brocolis', '500g');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Choux-fleurs', '1 pièce');
+   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Épinards', '300g');
+
+
+   CREATE TABLE family_basket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL
+);
+  INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Carottes', '750g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Brocolis', '500g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Choux-fleurs', '1 pièce');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Épinards', '300g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Poireaux', '400g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Navets', '600g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Pommes de terre', '1kg');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Haricots verts', '300g');
+   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Courges', '1 pièce');
+
+
+
+
