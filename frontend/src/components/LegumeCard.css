@@ -40,13 +40,13 @@
   border-radius: 40px 40px 0px 0px;
 }
 
-p {
+.priceCardAll {
   font-size: 16px;
   font-weight: bolder;
   color: #555;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 720px) {
   .legumesCard {
     text-align: center;
     position: relative;
