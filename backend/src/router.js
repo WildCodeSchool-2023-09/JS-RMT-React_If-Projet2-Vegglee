@@ -11,7 +11,6 @@ const client = require("../database/client");
 // Route to get a list of vegetables
 router.get("/vegetables", (req, res) => {
   client
-
     .query("SELECT * FROM vegetable LIMIT 15")
     .then((result) => {
       res.status(200).json(result[0]);
