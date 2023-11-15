@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import LegumeCard from "../components/LegumeCard";
 
 function HomePage() {
@@ -8,7 +8,11 @@ function HomePage() {
       <h1>Mes bios légumes</h1>
       <div className="ctnCard">
         {legumes.map((legume) => {
-          return <LegumeCard key={legume.id} legume={legume} />;
+          return (
+            <Link to={`/vegetables/${legume.id}`} key={legume.id}>
+              <LegumeCard legume={legume} />
+            </Link>
+          );
         })}
       </div>
     </div>
