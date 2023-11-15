@@ -10,25 +10,12 @@ const router = express.Router();
 // Import itemControllers module for handling item-related operations
 
 // Route to get a list of items
-router.get("/vegetables", (req, res) => {
+router.get("/items", (req, res) => {
   client
-    .query("SELECT * FROM vegetable LIMIT 15")
-    .then((result) => {
-      res.status(200).json(result[0]);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.sendStatus(500);
-    });
-});
-router.get("/smallBasket", (req, res) => {
-  client
-    .query("SELECT * FROM smallBasket LIMIT 15")
-    .then((result) => {
-      res.status(200).json(result[0]);
-    })
-    .catch((err) => {
-      console.error(err);
+    .query("SELECT * FROM item")
+    .then((result) => res.status(200).json(result[0]))
+    .catch((error) => {
+      console.error(error);
       res.sendStatus(500);
     });
 });
