@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
 
 import App from "./App";
+import NosPaniersPage from "./pages/NosPaniersPage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/nos-paniers",
+    element: <NosPaniersPage />,
   },
 ]);
 
