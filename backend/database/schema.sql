@@ -1,5 +1,5 @@
 CREATE TABLE vegetable(
-   id                INTEGER  NOT NULL PRIMARY KEY 
+   id                INTEGER  NOT NULL PRIMARY KEY
   ,image             VARCHAR(117)
   ,species           VARCHAR(32) NOT NULL
   ,name              VARCHAR(54) NOT NULL
@@ -11,11 +11,9 @@ CREATE TABLE vegetable(
 );
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (1,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0137-1.jpg','Betterave En Mélange de Couleurs','Betterave En Mélange de Couleurs 3 Root Grex','Beta vulgaris','Cette variété produit différentes racines, pour la plupart allongées, aux couleurs de l’arc-en-ciel : rouge, orange, rose, violet... Ce pool génétique, créé par Alan Kapuler, implique trois variétés très anciennes : “Yellow Intermediate”, “Crosby Purple Egyptian” et “Lutz”.','Les betteraves, en plus d’être d’excellents légumes, sont riches en vitamines A, B1, B2, B6 et C et leurs feuilles, qui sont également une excellente source pour de nombreux minéraux et oligo-éléments [...]',0.7,43);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (2,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_medium_thumbnail/p2003-1.jpg','Laitue Pommée','Laitue Pommée De Printemps Merveille des 4 Saisons','Lactuca sativa','Cette variété ancienne est vigoureuse et se cultive en toute saison. Elle produit, même durant les grosses chaleurs, des feuilles fermes, de couleur rouge vif, formant rapidement une pomme arrondie.','Aucun conseil particulier',0.5,82);
-INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (3,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/g0121-1.jpg','Amaranthe à Grains','Amaranthe à Grains Plénitude K 432','Amaranthus sp.','C’est une des variétés les plus précoces et les plus productives. Elle peut atteindre 1,50 m de hauteur et offre d’imposantes panicules de couleur rose-brun ainsi que des feuilles parsemées de violet lorsqu’elles sont jeunes.','L’amarante, la reine du sans Gluten !
-
+INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (3,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/g0121-1.jpg','Amaranthe à Grains','Amaranthe à Grains Plénitude K 432','Amaranthus sp.','C’est une des variétés les plus précoces et les plus productives. Elle peut atteindre 1,50 m de hauteur et offre d’imposantes panicules de couleur rose-brun ainsi que des feuilles parsemées de violet lorsqu’elles sont jeunes.','L’amarante, la reine du sans Gluten ! 
 L’amarante, très connue pour ses qualités ornementales et dissidentes (elle a causé, la coquine, la perte de milliards de dollars à l’agro-industrie US en dévelo [...]',2.1,56);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (4,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/g0135-1.jpg','Amaranthe à Grains','Amaranthe à Grains Plénitude Rouge K 436','Amaranthus hypochondriacus','C’est une variété semi-naine, précoce et productive, qui offre de belles panicules rouges gorgées de graines blanches.','L’amarante, la reine du sans Gluten !
-
 L’amarante, très connue pour ses qualités ornementales et dissidentes (elle a causé, la coquine, la perte de milliards de dollars à l’agro-industrie US en dévelo [...]',2.6,19);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (5,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0577-1.jpg','Aubergines Amères','Aubergine Amère Africaine Rouge','Solanum aethiopicum','Les fruits rouges de cette variété pèsent jusqu''à 120 g et se consomment jeunes. Les plantes pouvent atteindre 1,50 m de hauteur.','Aucun conseil particulier',4.5,43);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (6,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/c0524-1.jpg','Gourdes','Gourde African Kettle','Lagenaria siceraria','Cette variété produit des fruits verts de forme arrondie et de 30 à 45 cm de longueur à l’épiderme lisse. Les gourdes, non comestibles, se sèchent dans un endroit sec et ventilé et peuvent être peintes, sculptées ou transformées en divers objets.','Aucun conseil particulier',3.4,43);
@@ -69,3 +67,22 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (48,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Concombres','Concombre Arola','Cucumis Sativus','Cette variété, très résistante aux maladies et destinée à la culture sous serre, offre de longs fruits d’un vert moyen à foncé, à l’épiderme ferme et légèrement parsemé de picots. Les fruits sont formés principalement aux tiges secondaires qui ne doivent pas être supprimées, mais être coupées après la mise à fruits.','Aucun conseil particulier',4.6,88);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (49,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Arroches','Arroches En mélange de couleurs','Atriplex hortensis','Ce mélange propose diverses variétés rustiques de la famille des Chénopodiacées aux feuilles de différentes couleurs qui se consomment crues ou cuites comme des épinards.','Aucun conseil particulier',3.3,30);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (50,NULL,'Pastèques','Pastèque Astrakhanski','Citrullus lanatus','Cette variété, précoce et idéale pour toutes les conditions de culture, produit des fruits arrondis de 30 cm de diamètre très sucrés à l''épiderme lisse, vert foncé moucheté de vert clair. Leur chair, ferme et juteuse, offre une délicieuse saveur.','La pastèque contient près de 92 % d’eau ainsi que peu de fibres, ce qui la rend plus digeste pour les personnes aux intestins sensibles. Riche en lycopène, un antioxydant qui lui donne sa couleur roug [...]',1.6,27);
+
+CREATE TABLE petit_panier AS
+SELECT id, image, species, name, latin, description, advice, price, 500 AS weight
+FROM vegetable
+ORDER BY RAND()
+LIMIT 5;
+
+CREATE TABLE mini_panier (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL
+);
+
+  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
+   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');

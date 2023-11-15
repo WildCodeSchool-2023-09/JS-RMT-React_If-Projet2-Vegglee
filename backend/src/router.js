@@ -12,10 +12,24 @@ const router = express.Router();
 // Route to get a list of items
 router.get("/items", (req, res) => {
   client
-    .query("SELECT * FROM item")
-    .then((result) => res.status(200).json(result[0]))
-    .catch((error) => {
-      console.error(error);
+
+    .query("SELECT * FROM vegetable LIMIT 15")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+router.get("/small-basket", (req, res) => {
+  client
+    .query("SELECT * FROM small-basket  LIMIT 15")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
       res.sendStatus(500);
     });
 });
