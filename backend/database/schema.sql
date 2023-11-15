@@ -86,3 +86,23 @@ CREATE TABLE mini_panier (
    INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
    INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
    INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
+
+   CREATE TABLE recipe (
+   id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
+  ,image                   VARCHAR(117)
+  ,time                    VARCHAR(60) NOT NULL
+  ,name                    VARCHAR(54) NOT NULL
+  ,difficulty              VARCHAR(26) NOT NULL
+  ,price                   VARCHAR(26) NOT NULL
+  ,ingredients             LONGTEXT  NOT NULL
+
+);
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/06/01/i140266-aubergines-farcies.webp','45min','aubergines farcies rapide','Facile','Bon Marché','Aubergine - 1 | Ail - 2 gousses | Oignon - 1 | Tomate - 1 | Jaune doeuf - 1 | Parmesan râpé - 25g');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2023/03/29/i191984-filename-jpg.webp','4h15min','Chou rouge aux pommes','Facile','Bon Marché','Chou rouge - 0.3 kg | Pommes - 125g | Cassonade - 22.5g');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2022/01/28/i182756-shutterstock-1176403060-1.webp','20min','Pierrade de légumes','Facile','Bon Marché','Poivron jaune - 0.5 | Poivron rouge - 0.5 | Poivron vert - 0.5 | Courgette - 0.5 | Aubergine - 0.5 | Sel - 0.5 pincée |Fleur de sel - 0.5 pincée');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2017/01/13/i115655-poivrons-de-padron.webp','20min','Poivrons de padrón','Facile','Bon Marché ','Poivrons - 200g | Huile d olive - 2 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/07/31/i141386-brocolis-au-wok.webp','20min','Brocolis sautés au wok','Facile','Bon Marché','Brocolis - 500g | Ail - 1 Gousse | Huile d olive - 2 c. à soupe | Sauce soja - 2 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i113872-choux-de-bruxelles.webp','25min','Choux de Bruxelles','Facile','Bon Marché','Choux de Bruxelle - 0.5 kg | Ail - 1.5 gousses | Beurre - 0.5 noix | Crème fraîche - 0.5 filet | Persil ciselé - 0.5 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
+
