@@ -5,6 +5,7 @@ import axios from "axios";
 import VegetableDetail from "./pages/OneVegetable";
 
 import App from "./App";
+import NosPaniersPage from "./pages/NosPaniersPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/vegetables/:id",
     element: <VegetableDetail />,
+  },  
+{
+    path: "/nos-paniers",
+    element: <NosPaniersPage />,
   },
 ]);
 
