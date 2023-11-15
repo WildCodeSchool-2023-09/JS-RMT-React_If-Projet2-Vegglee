@@ -21,8 +21,8 @@ const router = createBrowserRouter([
   {
     path: "/vegetables/:id",
     element: <VegetableDetail />,
-  },  
-{
+  },
+  {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
   },

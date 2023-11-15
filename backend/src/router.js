@@ -5,7 +5,6 @@ const client = require("../database/client");
 
 // Define Your API Routes Here
 
-
 // Import itemControllers module for handling item-related operations
 
 // Route to get a list of vegetables
