@@ -21,9 +21,9 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
-router.get("/mini_panier", (req, res) => {
+router.get("/smallBasket", (req, res) => {
   client
-    .query("SELECT * FROM mini_panier LIMIT 15")
+    .query("SELECT * FROM smallBasket LIMIT 15")
     .then((result) => {
       res.status(200).json(result[0]);
     })
