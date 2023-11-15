@@ -62,5 +62,6 @@
   .legumesCard:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
+    border: 1px solid #f98919;
   }
 }

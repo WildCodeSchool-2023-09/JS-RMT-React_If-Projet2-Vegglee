@@ -6,12 +6,8 @@ import axios from "axios";
 
 function LegumeCard({ searchText }) {
   const vegetables = useLoaderData();
-  const [filteredVegetables, setFilteredVegetables] = useState(
-    vegetables.filter((vegetable) =>
-      vegetable.name.toLowerCase().includes(searchText.toLowerCase())
-    )
-  );
-  // Filtrer les légumes en fonction du texte de recherche
+  const [filteredVegetables, setFilteredVegetables] = useState(vegetables);
+
   useEffect(() => {
     if (searchText !== "") {
       axios
@@ -22,6 +18,8 @@ function LegumeCard({ searchText }) {
         )
         .then((res) => setFilteredVegetables(res.data))
         .catch((err) => console.error(err));
+    } else {
+      setFilteredVegetables(vegetables);
     }
   }, [searchText]);
 
