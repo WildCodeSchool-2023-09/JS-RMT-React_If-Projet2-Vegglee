@@ -87,16 +87,3 @@ INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
 
-
-CREATE TABLE mini_panier (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-    quantity_or_weight VARCHAR(20) NOT NULL
-);
-
-  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
