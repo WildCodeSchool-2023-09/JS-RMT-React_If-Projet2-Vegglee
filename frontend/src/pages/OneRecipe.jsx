@@ -36,9 +36,17 @@ function RecipeDetail() {
                 {ingredient}
               </p>
             ))}
-            <div className="ctnIngredient " />
+            <h3 className="recipePrep">
+              Préparation : {recipe.preparation} | Cuisson : {recipe.cuisson}
+            </h3>
           </div>
-          <p className="description">{recipe.description}</p>
+          <div className="recipeRecette">
+            {recipe.recette.split("|").map((recette) => (
+              <p key={recette} className="recipeRecette">
+                {recette}
+              </p>
+            ))}
+          </div>
         </>
       )}
     </div>

@@ -16,25 +16,23 @@
 }
 
 .imgRecipeCard {
-  max-height: 300px;
+  max-height: 400px;
   height: 300px;
   width: 300px;
-  border-radius: 40px 40px 40px 40px;
+  border-radius: 40px;
 }
 
-@media screen and (min-width: 600px) {
-  .recipeCard {
-    text-align: center;
-    position: relative;
-    width: 300px;
-    margin: 10px;
-    transition: transform 0.2s;
-  }
+.recipeCard {
+  text-align: center;
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 40px;
+}
 
-  .recipeCard:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s;
-    border: 1px solid green;
-    border-radius: 40px;
-  }
+.recipeCard:hover {
+  transform: scale(1.05);
+  border: 1px solid green;
+  transition: transform 0.2s;
 }
