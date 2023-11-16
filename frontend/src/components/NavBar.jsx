@@ -1,15 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.vegglee.jpg";
+import "./NavBar.css";
+import Logo from "../assets/Logo.Vegglee.jpg";
 
 function NavBar() {
   return (
-    <div>
-      <img src={Logo} alt="logo" />
-
+    <div className="NavBar">
+      <div className="Logo">
+        <img src={Logo} alt="Logo" />
+      </div>
       <div className="NavLink">
         <Link to="/">Home</Link>
-        <Link to="/nos-paniers">Nos Paniers</Link>
+        <Link to="/NosPaniers">Nos paniers</Link>
+        <Link to="/NosRecettes">Nos recettes</Link>
+        <Link to="/Contact">S'inscrire</Link>
       </div>
     </div>
   );
