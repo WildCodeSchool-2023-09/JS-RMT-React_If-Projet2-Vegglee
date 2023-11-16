@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
+import Formulaire from "./pages/Formulaire";
 
 import App from "./App";
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "Formulaire",
+    element: <Formulaire />,
   },
 ]);
 
