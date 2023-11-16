@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <VegetableDetail />,
   },
   {
-    path: "/api/recettes",
+    path: "/recettes",
     element: <RecipePage />,
   },
   {

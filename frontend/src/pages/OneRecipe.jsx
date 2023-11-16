@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./OneRecipe.css";
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -22,14 +23,20 @@ function RecipeDetail() {
     <div>
       {recipe && (
         <>
-          <img src={recipe.image} alt={recipe.name} className="bigImg" />
-          <div className="rectangle" />
-          <div className="separate" />
-          <h2 className="name">{recipe.name}</h2>
-          <h2 className="quantity">Quantité: {recipe.quantityAvailable}</h2>
-          <p className="price">Prix: {recipe.price}0 €</p>
-          <div className="centeredImage">
-            <img src={recipe.image} alt={recipe.name} className="smallImg" />
+          <h2 className="recipeName">{recipe.name}</h2>
+          <img className="recipeImg" src={recipe.image} alt={recipe.name} />
+          <p className="recipeTime">
+            {recipe.time} • {recipe.difficulty} • {recipe.price}
+          </p>
+
+          <h3 className="recipePeople">Ingrédients • 2 personne</h3>
+          <div className="ingredients">
+            {recipe.ingredients.split("|").map((ingredient) => (
+              <p key={ingredient} className="recipeIngredient">
+                {ingredient}
+              </p>
+            ))}
+            <div className="ctnIngredient " />
           </div>
           <p className="description">{recipe.description}</p>
         </>

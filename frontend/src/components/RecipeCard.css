@@ -34,5 +34,7 @@
   .recipeCard:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
+    border: 1px solid green;
+    border-radius: 40px;
   }
 }
