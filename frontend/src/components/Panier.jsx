@@ -14,7 +14,7 @@ function Panier({ type }) {
     imageSrc =
       "https://www.fermes-imagine.fr/wp-content/uploads/2019/04/panier-frais-saison-ferme-lyon.jpg";
     titre = "Panier duo";
-  } else if (type === "familial") {
+  } else if (type === "family") {
     imageSrc =
       "https://cdn.bioalaune.com/img/article/thumb/900x500/33271-le_guide_des_paniers_bio_et_locaux_par_region.webp";
     titre = "Panier familial";
@@ -26,9 +26,7 @@ function Panier({ type }) {
       <div>
         <h2>{titre}</h2>
         <p>Prix du panier</p>
-        <Link to={`/panier/${type}`}>
-          <button type="button">Voir le panier</button>
-        </Link>
+        <Link to={`/nos-paniers/${type}`}>Voir le panier</Link>
       </div>
     </div>
   );

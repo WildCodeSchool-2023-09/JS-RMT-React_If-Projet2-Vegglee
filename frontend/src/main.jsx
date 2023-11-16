@@ -6,6 +6,7 @@ import VegetableDetail from "./pages/OneVegetable";
 
 import App from "./App";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import PanierDetailsPage from "./pages/PanierDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,20 @@ const router = createBrowserRouter([
   {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
+  },
+  {
+    path: "/nos-paniers/:type",
+    element: <PanierDetailsPage />,
+    loader: ({ params }) => {
+      const type = params.type.replace("panier", "");
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/${type}_basket`)
+        .then((res) => res.data)
+        .catch((err) => {
+          console.error(err);
+          return null;
+        });
+    },
   },
 ]);
 

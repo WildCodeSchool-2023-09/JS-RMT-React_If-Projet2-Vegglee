@@ -9,7 +9,7 @@ function NosPaniersPage() {
       <div className="nosPaniers">
         <Panier type="solo" />
         <Panier type="duo" />
-        <Panier type="familial" />
+        <Panier type="family" />
       </div>
     </div>
   );

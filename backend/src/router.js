@@ -19,9 +19,9 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
-router.get("/solo_basket", (req, res) => {
+router.get("/duo_basket", (req, res) => {
   client
-    .query("SELECT * FROM solo_basket")
+    .query("SELECT * FROM duo_basket")
     .then((result) => {
       res.status(200).json(result[0]);
     })
@@ -30,9 +30,9 @@ router.get("/solo_basket", (req, res) => {
       res.sendStatus(500);
     });
 });
-router.get("/duo_basket", (req, res) => {
+router.get("/solo_basket", (req, res) => {
   client
-    .query("SELECT * FROM duo_basket")
+    .query("SELECT * FROM solo_basket")
     .then((result) => {
       res.status(200).json(result[0]);
     })
