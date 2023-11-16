@@ -1,8 +1,7 @@
-// SearchBar.jsx
 import React from "react";
 import "./SearchBar.css";
 
-function SearchBar({ setSearchText }) {
+function SearchBar({ searchText, setSearchText }) {
   return (
     <div className="searchContainer">
       <div className="search-bar">
@@ -10,6 +9,7 @@ function SearchBar({ setSearchText }) {
           className="searchInput"
           type="text"
           placeholder="cherche ton bio légume..."
+          value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
       </div>

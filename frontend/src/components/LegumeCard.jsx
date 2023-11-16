@@ -1,8 +1,7 @@
-// LegumeCard.jsx
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import "./LegumeCard.css";
-import axios from "axios";
 
 function LegumeCard({ searchText }) {
   const vegetables = useLoaderData();
