@@ -70,11 +70,11 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 
 CREATE TABLE recipe(
    id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
-  ,image                   VARCHAR(117)
-  ,time                    VARCHAR(60) NOT NULL
-  ,name                    VARCHAR(54) NOT NULL
-  ,difficulty              VARCHAR(26) NOT NULL
-  ,price                   VARCHAR(26) NOT NULL
+  ,image                   VARCHAR(255)
+  ,time                    VARCHAR(255) NOT NULL
+  ,name                    VARCHAR(255) NOT NULL
+  ,difficulty              VARCHAR(255) NOT NULL
+  ,price                   VARCHAR(255) NOT NULL
   ,ingredients             LONGTEXT  NOT NULL
 
 );
@@ -87,12 +87,6 @@ INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
 
-
-CREATE TABLE petit_panier AS
-SELECT id, image, species, name, latin, description, advice, price, 500 AS weight
-FROM vegetable
-ORDER BY RAND()
-LIMIT 5;
 
 CREATE TABLE mini_panier (
     id INT AUTO_INCREMENT PRIMARY KEY,
