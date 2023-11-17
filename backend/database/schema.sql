@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE TABLE vegetable(
    id                INTEGER  NOT NULL PRIMARY KEY
   ,image             VARCHAR(117)
@@ -68,32 +69,6 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (49,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Arroches','Arroches En mélange de couleurs','Atriplex hortensis','Ce mélange propose diverses variétés rustiques de la famille des Chénopodiacées aux feuilles de différentes couleurs qui se consomment crues ou cuites comme des épinards.','Aucun conseil particulier',3.3,30);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (50,NULL,'Pastèques','Pastèque Astrakhanski','Citrullus lanatus','Cette variété, précoce et idéale pour toutes les conditions de culture, produit des fruits arrondis de 30 cm de diamètre très sucrés à l''épiderme lisse, vert foncé moucheté de vert clair. Leur chair, ferme et juteuse, offre une délicieuse saveur.','La pastèque contient près de 92 % d’eau ainsi que peu de fibres, ce qui la rend plus digeste pour les personnes aux intestins sensibles. Riche en lycopène, un antioxydant qui lui donne sa couleur roug [...]',1.6,27);
 
-CREATE TABLE recipe(
-   id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
-  ,image                   VARCHAR(255)
-  ,time                    VARCHAR(255) NOT NULL
-  ,name                    VARCHAR(255) NOT NULL
-  ,difficulty              VARCHAR(255) NOT NULL
-  ,price                   VARCHAR(255) NOT NULL
-  ,ingredients             LONGTEXT  NOT NULL
-
-);
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/06/01/i140266-aubergines-farcies.webp','45min','aubergines farcies rapide','Facile','Bon Marché','Aubergine - 1 | Ail - 2 gousses | Oignon - 1 | Tomate - 1 | Jaune doeuf - 1 | Parmesan râpé - 25g');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2023/03/29/i191984-filename-jpg.webp','4h15min','Chou rouge aux pommes','Facile','Bon Marché','Chou rouge - 0.3 kg | Pommes - 125g | Cassonade - 22.5g');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2022/01/28/i182756-shutterstock-1176403060-1.webp','20min','Pierrade de légumes','Facile','Bon Marché','Poivron jaune - 0.5 | Poivron rouge - 0.5 | Poivron vert - 0.5 | Courgette - 0.5 | Aubergine - 0.5 | Sel - 0.5 pincée |Fleur de sel - 0.5 pincée');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2017/01/13/i115655-poivrons-de-padron.webp','20min','Poivrons de padrón','Facile','Bon Marché ','Poivrons - 200g | Huile d olive - 2 c. à soupe');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/07/31/i141386-brocolis-au-wok.webp','20min','Brocolis sautés au wok','Facile','Bon Marché','Brocolis - 500g | Ail - 1 Gousse | Huile d olive - 2 c. à soupe | Sauce soja - 2 c. à soupe');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i113872-choux-de-bruxelles.webp','25min','Choux de Bruxelles','Facile','Bon Marché','Choux de Bruxelle - 0.5 kg | Ail - 1.5 gousses | Beurre - 0.5 noix | Crème fraîche - 0.5 filet | Persil ciselé - 0.5 c. à soupe');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
-INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
-
-  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
-
    CREATE TABLE recipe (
    id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
   ,image                   VARCHAR(117)
@@ -116,3 +91,41 @@ INSERT INTO recipe (image,time,name,difficulty,price,ingredients,preparation,coo
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients,preparation,cooking,cookingRecipe ) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche','40 min','4h','1 | Lavez soigneusement le potiron à la brosse, découpez la partie supérieure, puis sortez les pépins et les fibres, nettoyez bien l’intérieur, salez et poivrez. | 2 | Grillez le pain de campagne en tranches fines, et frottez-le avec l’ail. | 3 | Emincez les têtes des champignons. | 4 | Mélangez finement le fromage râpé (beaufort, emmenthal, gruyére), avec la créme fraîche et la noix de muscade râpée. | 5 | Tapissez le fond du potiron d’une couche de pain grillé, une couche de champignons, salez, poivrez, puis mettez le fromage avec la créme. | 6 | Par dessus, continuez avec une deuxiéme couche et une troisiéme si besoin, ensuite fermez avec la partie supérieure. | 7 | Préchauffez le four th.6 (180°C). | 8 | Emballez la citrouille dans du papier alu , faites 4 tours du bas vers le haut, déposez-la sur le léche frite avec un peu d’eau, et enfournez 4 heures, contrôlez la cuisson avec une aiguille ou un couteau à travers le papier alu, il faut que laiguille ou le couteau traverse facilement la peau de la citrouille. | 9 | Servez à table comme plat principal. Mélangez délicatement l’intérieur en prenant soin de ne pas percer la peau | 10 | Et servez les convives sans attendre.');
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients,preparation,cooking,cookingRecipe ) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe','10 min','12 min','1 | Pelez et émincez les oignons. Epluchez et coupez en rondelles les carottes. | 2 | Dans la cuve du robot, mettez l’huile d’olive et lancez le mode dorer. Faites revenir les oignons pendant 2 min | 3 | Ajoutez les carottes, l’eau, le bouquet garni puis lancez la cuisson sous pression 10 min | 4 | Ajoutez la crème fraîche puis mélangez avec une cuillère en bois | 5 | Rectifiez l’assaisonnement puis servir');
 
+CREATE TABLE basket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL,
+    type VARCHAR(100) NOT NULL
+);
+
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Poireaux', '400g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Navets', '600g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Pommes de terre', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Haricots verts', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Courges', '1 pièce', "family");
