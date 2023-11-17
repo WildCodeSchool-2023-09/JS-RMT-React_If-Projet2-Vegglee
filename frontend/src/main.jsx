@@ -7,12 +7,22 @@ import App from "./App";
 import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import HomePage from "./pages/HomePage";
+import FormulairePage from "./pages/FormulairePage";
 import PanierDetailsPage from "./pages/PanierDetailsPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
+  },
+  {
+    path: "/formulaire",
+    element: <FormulairePage />,
   },
   {
     path: "/vegetables/:id",
