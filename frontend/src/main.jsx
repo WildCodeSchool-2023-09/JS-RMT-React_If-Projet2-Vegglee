@@ -6,6 +6,7 @@ import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import App from "./App";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import PanierDetailsPage from "./pages/PanierDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,20 @@ const router = createBrowserRouter([
   {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
+  },
+  {
+    path: "/nos-paniers/:type",
+    element: <PanierDetailsPage />,
+    loader: async ({ params }) => {
+      const paniers = await axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/basket/${params.type}`)
+        .then((res) => res.data)
+        .catch((err) => {
+          console.error(err);
+        });
+
+      return { paniers, ...params };
+    },
   },
 ]);
 

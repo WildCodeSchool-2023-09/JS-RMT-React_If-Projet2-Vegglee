@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE TABLE vegetable(
    id                INTEGER  NOT NULL PRIMARY KEY
   ,image             VARCHAR(117)
@@ -68,6 +69,7 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (49,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Arroches','Arroches En mélange de couleurs','Atriplex hortensis','Ce mélange propose diverses variétés rustiques de la famille des Chénopodiacées aux feuilles de différentes couleurs qui se consomment crues ou cuites comme des épinards.','Aucun conseil particulier',3.3,30);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (50,NULL,'Pastèques','Pastèque Astrakhanski','Citrullus lanatus','Cette variété, précoce et idéale pour toutes les conditions de culture, produit des fruits arrondis de 30 cm de diamètre très sucrés à l''épiderme lisse, vert foncé moucheté de vert clair. Leur chair, ferme et juteuse, offre une délicieuse saveur.','La pastèque contient près de 92 % d’eau ainsi que peu de fibres, ce qui la rend plus digeste pour les personnes aux intestins sensibles. Riche en lycopène, un antioxydant qui lui donne sa couleur roug [...]',1.6,27);
 
+
 CREATE TABLE recipe(
    id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
   ,image                   VARCHAR(255)
@@ -76,7 +78,6 @@ CREATE TABLE recipe(
   ,difficulty              VARCHAR(255) NOT NULL
   ,price                   VARCHAR(255) NOT NULL
   ,ingredients             LONGTEXT  NOT NULL
-
 );
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/06/01/i140266-aubergines-farcies.webp','45min','aubergines farcies rapide','Facile','Bon Marché','Aubergine - 1 | Ail - 2 gousses | Oignon - 1 | Tomate - 1 | Jaune doeuf - 1 | Parmesan râpé - 25g');
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2023/03/29/i191984-filename-jpg.webp','4h15min','Chou rouge aux pommes','Facile','Bon Marché','Chou rouge - 0.3 kg | Pommes - 125g | Cassonade - 22.5g');
@@ -87,3 +88,41 @@ INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
 INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
 
+CREATE TABLE basket (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    quantity_or_weight VARCHAR(20) NOT NULL,
+    type VARCHAR(100) NOT NULL
+);
+
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Poireaux', '400g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Navets', '600g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Pommes de terre', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Haricots verts', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Courges', '1 pièce', "family");
