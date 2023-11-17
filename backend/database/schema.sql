@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE TABLE vegetable(
    id                INTEGER  NOT NULL PRIMARY KEY
   ,image             VARCHAR(117)
@@ -70,56 +71,44 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 
 
 
-CREATE TABLE solo_basket (
+CREATE TABLE basket (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
-    quantity_or_weight VARCHAR(20) NOT NULL
+    quantity_or_weight VARCHAR(20) NOT NULL,
+    type VARCHAR(100) NOT NULL
 );
 
-  INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO solo_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
-
-   CREATE TABLE duo_basket (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-    quantity_or_weight VARCHAR(20) NOT NULL
-);
-  INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Carottes', '750g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Brocolis', '500g');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Choux-fleurs', '1 pièce');
-   INSERT INTO duo_basket(product_name, quantity_or_weight) VALUES ('Épinards', '300g');
-
-
-   CREATE TABLE family_basket (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-    quantity_or_weight VARCHAR(20) NOT NULL
-);
-  INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Carottes', '750g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Brocolis', '500g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Choux-fleurs', '1 pièce');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Épinards', '300g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Poireaux', '400g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Navets', '600g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Pommes de terre', '1kg');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Haricots verts', '300g');
-   INSERT INTO family_basket(product_name, quantity_or_weight) VALUES ('Courges', '1 pièce');
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "solo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "duo");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AUBERGINES STRIEES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('COURGETTES JAUNES', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('POIVRONS ROUGES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('TOMATES GRAPPE', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('AIL', 'Pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('OIGNONS JAUNES', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Carottes', '750g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Brocolis', '500g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Choux-fleurs', '1 pièce', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Épinards', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Poireaux', '400g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Navets', '600g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Pommes de terre', '1kg', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Haricots verts', '300g', "family");
+INSERT INTO basket(product_name, quantity_or_weight, type) VALUES ('Courges', '1 pièce', "family");
 
 
 

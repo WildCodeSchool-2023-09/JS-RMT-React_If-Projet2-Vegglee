@@ -30,15 +30,15 @@ const router = createBrowserRouter([
   {
     path: "/nos-paniers/:type",
     element: <PanierDetailsPage />,
-    loader: ({ params }) => {
-      const type = params.type.replace("panier", "");
-      return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/${type}_basket`)
+    loader: async ({ params }) => {
+      const paniers = await axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/basket/${params.type}`)
         .then((res) => res.data)
         .catch((err) => {
           console.error(err);
-          return null;
         });
+
+      return { paniers, ...params };
     },
   },
 ]);
