@@ -11,9 +11,7 @@ function NavBar() {
       </div>
       <div className="NavLink">
         <Link to="/">Home</Link>
-        <Link to="/NosPaniers">Nos paniers</Link>
-        <Link to="/NosRecettes">Nos recettes</Link>
-        <Link to="/Contact">S'inscrire</Link>
+        <Link to="/nos-paniers">Nos paniers</Link>
       </div>
     </div>
   );
