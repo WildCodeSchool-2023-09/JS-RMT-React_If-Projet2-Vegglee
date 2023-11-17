@@ -30,7 +30,8 @@ const router = createBrowserRouter([
   {
     path: "/recettes/:id",
     element: <RecipeDetail />,
-  
+  },
+  {
     path: "/nos-paniers/:type",
     element: <PanierDetailsPage />,
     loader: async ({ params }) => {
