@@ -1,0 +1,20 @@
+[
+  {
+    "type": "solo",
+    "imageSrc": "https://cdn.bioalaune.com/img/article/thumb/900x500/28986-10_fruits_et_legumes_a_deguster_en_juillet.webp",
+    "titre": "Panier solo",
+    "prix": "20€"
+  },
+  {
+    "type": "duo",
+    "imageSrc": "https://www.fermes-imagine.fr/wp-content/uploads/2019/04/panier-frais-saison-ferme-lyon.jpg",
+    "titre": "Panier duo",
+    "prix": "35€"
+  },
+  {
+    "type": "family",
+    "imageSrc": "https://cdn.bioalaune.com/img/article/thumb/900x500/33271-le_guide_des_paniers_bio_et_locaux_par_region.webp",
+    "titre": "Panier Family",
+    "prix": "48€"
+  }
+]

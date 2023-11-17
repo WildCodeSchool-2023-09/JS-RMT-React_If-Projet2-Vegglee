@@ -2,23 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import axios from "axios";
-import VegetableDetail from "./pages/OneVegetable";
 
 import App from "./App";
+import VegetableDetail from "./pages/OneVegetable";
+import RecipePage from "./pages/RecipePage";
 import NosPaniersPage from "./pages/NosPaniersPage";
 import HomePage from "./pages/HomePage";
 import FormulairePage from "./pages/FormulairePage";
+import PanierDetailsPage from "./pages/PanierDetailsPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    loader: () => {
-      return axios
-        .get(`${import.meta.env.VITE_BACKEND_URL}/api/vegetables`)
-        .then((res) => res.data)
-        .catch((err) => console.error(err));
-    },
   },
   {
     path: "/home",
@@ -33,8 +29,26 @@ const router = createBrowserRouter([
     element: <VegetableDetail />,
   },
   {
+    path: "/recettes",
+    element: <RecipePage />,
+  },
+  {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
+  },
+  {
+    path: "/nos-paniers/:type",
+    element: <PanierDetailsPage />,
+    loader: async ({ params }) => {
+      const paniers = await axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/basket/${params.type}`)
+        .then((res) => res.data)
+        .catch((err) => {
+          console.error(err);
+        });
+
+      return { paniers, ...params };
+    },
   },
 ]);
 

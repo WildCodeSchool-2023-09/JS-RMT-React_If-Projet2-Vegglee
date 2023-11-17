@@ -26,6 +26,9 @@
     "supertest": "^6.3.3"
   },
   "lint-staged": {
-    "*.js": ["prettier --check", "eslint"]
+    "*.js": [
+      "prettier --check",
+      "eslint"
+    ]
   }
 }

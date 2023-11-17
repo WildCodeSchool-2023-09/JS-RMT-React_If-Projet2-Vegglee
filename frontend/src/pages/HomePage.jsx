@@ -1,8 +1,9 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useState } from "react";
 import LegumeCard from "../components/LegumeCard";
+import SearchBar from "../components/SearchBar";
 
 function HomePage() {
-  const legumes = useLoaderData();
+  const [searchText, setSearchText] = useState("");
   return (
     <div>
       <Link to="/formulaire">Formulaire</Link>
@@ -16,6 +17,8 @@ function HomePage() {
           );
         })}
       </div>
+      <SearchBar setSearchText={setSearchText} />
+      <LegumeCard searchText={searchText} />
     </div>
   );
 }

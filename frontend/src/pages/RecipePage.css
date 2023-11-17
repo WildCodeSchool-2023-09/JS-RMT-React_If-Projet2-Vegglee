@@ -1,0 +1,11 @@
+.titleRecipe {
+  color: green;
+  display: flex;
+  justify-content: center;
+}
+
+.containerRecipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
