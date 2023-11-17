@@ -68,21 +68,22 @@ INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quant
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (49,'https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/default/product.png','Arroches','Arroches En mélange de couleurs','Atriplex hortensis','Ce mélange propose diverses variétés rustiques de la famille des Chénopodiacées aux feuilles de différentes couleurs qui se consomment crues ou cuites comme des épinards.','Aucun conseil particulier',3.3,30);
 INSERT INTO vegetable(id,image,species,name,latin,description,advice,price,quantityAvailable) VALUES (50,NULL,'Pastèques','Pastèque Astrakhanski','Citrullus lanatus','Cette variété, précoce et idéale pour toutes les conditions de culture, produit des fruits arrondis de 30 cm de diamètre très sucrés à l''épiderme lisse, vert foncé moucheté de vert clair. Leur chair, ferme et juteuse, offre une délicieuse saveur.','La pastèque contient près de 92 % d’eau ainsi que peu de fibres, ce qui la rend plus digeste pour les personnes aux intestins sensibles. Riche en lycopène, un antioxydant qui lui donne sa couleur roug [...]',1.6,27);
 
-CREATE TABLE petit_panier AS
-SELECT id, image, species, name, latin, description, advice, price, 500 AS weight
-FROM vegetable
-ORDER BY RAND()
-LIMIT 5;
+CREATE TABLE recipe(
+   id                      INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY
+  ,image                   VARCHAR(255)
+  ,time                    VARCHAR(255) NOT NULL
+  ,name                    VARCHAR(255) NOT NULL
+  ,difficulty              VARCHAR(255) NOT NULL
+  ,price                   VARCHAR(255) NOT NULL
+  ,ingredients             LONGTEXT  NOT NULL
 
-CREATE TABLE mini_panier (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(255) NOT NULL,
-    quantity_or_weight VARCHAR(20) NOT NULL
 );
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/06/01/i140266-aubergines-farcies.webp','45min','aubergines farcies rapide','Facile','Bon Marché','Aubergine - 1 | Ail - 2 gousses | Oignon - 1 | Tomate - 1 | Jaune doeuf - 1 | Parmesan râpé - 25g');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2023/03/29/i191984-filename-jpg.webp','4h15min','Chou rouge aux pommes','Facile','Bon Marché','Chou rouge - 0.3 kg | Pommes - 125g | Cassonade - 22.5g');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2022/01/28/i182756-shutterstock-1176403060-1.webp','20min','Pierrade de légumes','Facile','Bon Marché','Poivron jaune - 0.5 | Poivron rouge - 0.5 | Poivron vert - 0.5 | Courgette - 0.5 | Aubergine - 0.5 | Sel - 0.5 pincée |Fleur de sel - 0.5 pincée');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2017/01/13/i115655-poivrons-de-padron.webp','20min','Poivrons de padrón','Facile','Bon Marché ','Poivrons - 200g | Huile d olive - 2 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/07/31/i141386-brocolis-au-wok.webp','20min','Brocolis sautés au wok','Facile','Bon Marché','Brocolis - 500g | Ail - 1 Gousse | Huile d olive - 2 c. à soupe | Sauce soja - 2 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i113872-choux-de-bruxelles.webp','25min','Choux de Bruxelles','Facile','Bon Marché','Choux de Bruxelle - 0.5 kg | Ail - 1.5 gousses | Beurre - 0.5 noix | Crème fraîche - 0.5 filet | Persil ciselé - 0.5 c. à soupe');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2016/04/28/i108481-citrouille-garnie-cuite-au-four.webp','4h40min','Citrouille garnie cuite au four','Facile','Bon Marché','Citrouille - 1 | Pain de campagne - 0.5 | Champignon de paris - 0.5 boîte | Crème fraîche');
+INSERT INTO recipe (image,time,name,difficulty,price,ingredients) VALUES ('https://img.cuisineaz.com/660x660/2018/04/09/i139255-carottes-vichy-au-cookeo.webp','22min','Carottes vichy au Cookeo','Facile','Bon Marché','Carotte - 0.5 kg | Oignon - 1 | Bouquet garni - 0.5 | Crème fraîche épaisse - 100g | Eau - 50ml | Huile d olive - 0.5 c. à soupe');
 
-  INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AUBERGINES STRIEES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('COURGETTES JAUNES', '1kg');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('POIVRONS ROUGES', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('TOMATES GRAPPE', '500g');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('AIL', 'Pièce');
-   INSERT INTO mini_panier(product_name, quantity_or_weight) VALUES ('OIGNONS JAUNES', '500g');

@@ -57,6 +57,19 @@ router.get("/vegetables/:id", (req, res) => {
       res.sendStatus(500);
     });
 });
+
+router.get("/recipes", (req, res) => {
+  client
+    .query("SELECT * FROM recipe LIMIT 8")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 // Route to get a specific item by ID
 // router.get("/vegetables/:id", itemControllers.read);
 
