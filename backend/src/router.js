@@ -47,7 +47,7 @@ router.get("/vegetables/:id", (req, res) => {
     });
 });
 
-router.get("/recettes", (req, res) => {
+router.get("/recipes", (req, res) => {
   client
     .query("SELECT * FROM recipe LIMIT 8")
     .then((result) => {

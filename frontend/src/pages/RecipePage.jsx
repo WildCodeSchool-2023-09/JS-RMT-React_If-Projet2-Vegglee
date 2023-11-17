@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 import "./RecipePage.css";
 
 function RecipePage() {
-  const [recipe, setRecipe] = useState(null);
+  const [recipe, setRecipe] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/api/recettes`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/recipes`)
       .then((response) => {
         const recipeData = response.data;
         setRecipe(recipeData);
@@ -18,10 +19,6 @@ function RecipePage() {
         console.error(error);
       });
   }, []);
-
-  if (recipe === null) {
-    return null;
-  }
 
   return (
     <div>
