@@ -9,14 +9,14 @@ const client = require("../database/client");
 
 // Route to get a list of vegetables
 router.get("/vegetables", (req, res) => {
-  let query = "";
+  let query = "SELECT * FROM vegetable";
   let params = []; // Déplacez la déclaration en dehors de la condition
 
   if (req.query.filter) {
-    query = "SELECT * FROM vegetable WHERE name LIKE ?";
+    query += " WHERE name LIKE ?";
     params = [`%${req.query.filter}%`];
   } else {
-    query = "SELECT * FROM vegetable LIMIT 15";
+    query += " LIMIT 15";
   }
 
   client
