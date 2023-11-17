@@ -30,9 +30,9 @@ router.get("/vegetables", (req, res) => {
     });
 });
 
-router.get("/small-basket", (req, res) => {
+router.get("/basket/:type", (req, res) => {
   client
-    .query("SELECT * FROM small-basket  LIMIT 15")
+    .query("SELECT * FROM basket WHERE type = ? ", [req.params.type])
     .then((result) => {
       res.status(200).json(result[0]);
     })
