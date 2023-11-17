@@ -9,8 +9,18 @@ const client = require("../database/client");
 
 // Route to get a list of vegetables
 router.get("/vegetables", (req, res) => {
+  let query = "SELECT * FROM vegetable";
+  let params = []; // Déplacez la déclaration en dehors de la condition
+
+  if (req.query.filter) {
+    query += " WHERE name LIKE ?";
+    params = [`%${req.query.filter}%`];
+  } else {
+    query += " LIMIT 15";
+  }
+
   client
-    .query("SELECT * FROM vegetable LIMIT 15")
+    .query(query, params)
     .then((result) => {
       res.status(200).json(result[0]);
     })
@@ -19,6 +29,7 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
+
 router.get("/basket/:type", (req, res) => {
   client
     .query("SELECT * FROM basket WHERE type = ? ", [req.params.type])
