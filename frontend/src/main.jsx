@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import axios from "axios";
+
 import App from "./App";
 import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
