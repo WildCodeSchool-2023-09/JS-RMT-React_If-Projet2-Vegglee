@@ -6,6 +6,8 @@ import VegetableDetail from "./pages/OneVegetable";
 
 import App from "./App";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import HomePage from "./pages/HomePage";
+import FormulairePage from "./pages/FormulairePage";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
         .then((res) => res.data)
         .catch((err) => console.error(err));
     },
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
+  },
+  {
+    path: "/formulaire",
+    element: <FormulairePage />,
   },
   {
     path: "/vegetables/:id",

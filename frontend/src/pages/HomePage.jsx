@@ -5,6 +5,7 @@ function HomePage() {
   const legumes = useLoaderData();
   return (
     <div>
+      <Link to="/formulaire">Formulaire</Link>
       <h1>Mes bios légumes</h1>
       <div className="ctnCard">
         {legumes.map((legume) => {
