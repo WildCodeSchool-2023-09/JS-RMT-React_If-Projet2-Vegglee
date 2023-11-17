@@ -7,6 +7,7 @@ import App from "./App";
 import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import NosPaniersPage from "./pages/NosPaniersPage";
+import RecipeDetail from "./pages/OneRecipe";
 import HomePage from "./pages/HomePage";
 import FormulairePage from "./pages/FormulairePage";
 import PanierDetailsPage from "./pages/PanierDetailsPage";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/nos-paniers",
     element: <NosPaniersPage />,
+  },
+  {
+    path: "/recettes/:id",
+    element: <RecipeDetail />,
   },
   {
     path: "/nos-paniers/:type",
