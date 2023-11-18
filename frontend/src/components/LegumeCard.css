@@ -4,10 +4,13 @@
   justify-content: center;
 }
 
+.linkVegetableCard {
+  text-decoration: none;
+}
+
 .legumesCard {
   text-align: center;
   position: relative;
-  width: 200px;
   margin: 10px;
   border: 1px solid #ddd;
   border-radius: 40px;
@@ -36,9 +39,8 @@
 }
 
 .imgCard {
-  max-height: 300px;
-  height: 300px;
-  width: 300px;
+  max-width: 100%;
+  height: auto;
   border-radius: 40px 40px 0px 0px;
 }
 
@@ -48,7 +50,7 @@
   color: #555;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 720px) {
   .legumesCard {
     text-align: center;
     position: relative;
@@ -63,5 +65,6 @@
   .legumesCard:hover {
     transform: scale(1.05);
     transition: transform 0.2s;
+    border: 1px solid #f98919;
   }
 }

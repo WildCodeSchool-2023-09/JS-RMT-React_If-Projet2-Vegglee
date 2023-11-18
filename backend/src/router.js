@@ -9,8 +9,18 @@ const client = require("../database/client");
 
 // Route to get a list of vegetables
 router.get("/vegetables", (req, res) => {
+  let query = "SELECT * FROM vegetable";
+  let params = []; // Déplacez la déclaration en dehors de la condition
+
+  if (req.query.filter) {
+    query += " WHERE name LIKE ?";
+    params = [`%${req.query.filter}%`];
+  } else {
+    query += " LIMIT 15";
+  }
+
   client
-    .query("SELECT * FROM vegetable LIMIT 15")
+    .query(query, params)
     .then((result) => {
       res.status(200).json(result[0]);
     })
@@ -20,9 +30,9 @@ router.get("/vegetables", (req, res) => {
     });
 });
 
-router.get("/small-basket", (req, res) => {
+router.get("/basket/:type", (req, res) => {
   client
-    .query("SELECT * FROM small-basket  LIMIT 15")
+    .query("SELECT * FROM basket WHERE type = ? ", [req.params.type])
     .then((result) => {
       res.status(200).json(result[0]);
     })
@@ -53,6 +63,22 @@ router.get("/recipes", (req, res) => {
     .query("SELECT * FROM recipe LIMIT 8")
     .then((result) => {
       res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
+router.get("/recettes/:id", (req, res) => {
+  client
+    .query("SELECT * FROM recipe WHERE id = ?", [req.params.id])
+    .then((result) => {
+      if (result[0].length === 0) {
+        res.status(404).json({ message: "Aucune Recette trouvé avec cet ID" });
+      } else {
+        res.status(200).json(result[0][0]);
+      }
     })
     .catch((err) => {
       console.error(err);

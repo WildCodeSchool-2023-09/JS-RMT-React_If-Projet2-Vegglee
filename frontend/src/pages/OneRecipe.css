@@ -1,0 +1,152 @@
+.recipeName {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: green;
+}
+
+.recipeImg {
+  position: relative;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+  width: 50%;
+}
+
+.recipeTime {
+  margin-top: 60px;
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  color: green;
+  font-weight: bolder;
+}
+
+.recipeIngredient {
+  font-size: 25px;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: green;
+  width: 325px;
+  height: 60px;
+}
+
+.recipeIngredient:first-child {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.recipeIngredient:last-of-type {
+  border-bottom-left-radius: 40px; /* Ajoute un bord arrondi uniquement au coin inférieur gauche */
+  border-bottom-right-radius: 40px; /* Ajoute un bord arrondi uniquement au coin inférieur droit */
+}
+
+.recipePeople {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.recipePrep {
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: black;
+  font-weight: bolder;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+}
+
+.cookingRecipe {
+  font-size: 20px;
+  height: 120px;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  color: black;
+  font-weight: bolder;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .recipeName {
+    font-size: 30px;
+  }
+
+  .recipeImg {
+    height: 200px;
+    width: 50%;
+  }
+
+  .recipeTime {
+    font-size: 25px;
+  }
+
+  .recipePeople {
+    font-size: 20px;
+  }
+
+  .recipeIngredient {
+    font-size: 20px;
+    width: 250px;
+    height: 40px;
+  }
+
+  .recipePrep {
+    font-size: 20px;
+  }
+
+  .cookingRecipe {
+    font-size: 13px;
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .recipeName {
+    font-size: 25px;
+  }
+
+  .recipeImg {
+    height: 125px;
+    width: 50%;
+  }
+
+  .recipeTime {
+    font-size: 20px;
+  }
+
+  .recipePeople {
+    font-size: 15px;
+  }
+
+  .recipeIngredient {
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+  }
+
+  .recipePrep {
+    font-size: 15px;
+  }
+
+  .cookingRecipe {
+    height: 90px;
+    font-size: 13px;
+  }
+}
