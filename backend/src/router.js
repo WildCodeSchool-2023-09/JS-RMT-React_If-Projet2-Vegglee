@@ -19,6 +19,7 @@ router.get("/vegetables", (req, res) => {
       res.sendStatus(500);
     });
 });
+
 router.get("/small-basket", (req, res) => {
   client
     .query("SELECT * FROM small-basket  LIMIT 15")
