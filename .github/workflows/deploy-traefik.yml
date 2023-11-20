@@ -33,9 +33,12 @@ jobs:
     steps:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         with:
-          secrets: inherit
-          username: ${{ secrets.SSH_USER }}
-          host: ${{ secrets.SSH_HOST }}
-          password: ${{ secrets.SSH_PASSWORD }}
+          username: SSH_USER
+          host: SSH_HOST
+          password: SSH_PASSWORD
           script: cd && cd traefik/deploy && bash ./js-project.sh ${{ github.actor }} ${{ github.event.repository.name }} ${{ vars.PROJECT_NAME }} '${{ toJSON(vars) }}'
