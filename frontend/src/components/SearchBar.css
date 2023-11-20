@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 100px;
 }
 .searchInput {
   display: block;

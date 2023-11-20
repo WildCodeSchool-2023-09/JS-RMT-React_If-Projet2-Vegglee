@@ -26,6 +26,8 @@ function HomePage() {
 
   return (
     <div>
+      {" "}
+      <SearchBar setSearchText={setSearchText} />
       <select
         className="selectCategorie"
         name=""
@@ -34,12 +36,15 @@ function HomePage() {
       >
         <option value={0}>tous</option>
         {categories.map((categorie) => (
-          <option key={categorie.id} value={categorie.id}>
+          <option
+            className="optionCategorie"
+            key={categorie.id}
+            value={categorie.id}
+          >
             {categorie.nom}
           </option>
         ))}
       </select>
-      <SearchBar setSearchText={setSearchText} />
       <LegumeCard
         searchText={searchText}
         categories={categories}
