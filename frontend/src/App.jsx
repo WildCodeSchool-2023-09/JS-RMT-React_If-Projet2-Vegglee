@@ -1,12 +1,9 @@
-import HomePage from "./pages/HomePage";
-import "./App.css";
+// App.jsx
+import React from "react";
+import Layout from "./Layout";
 
 function App() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
