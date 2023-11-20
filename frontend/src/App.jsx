@@ -1,9 +1,12 @@
-// App.jsx
-import React from "react";
-import Layout from "./Layout";
+import HomePage from "./pages/HomePage";
+import "./App.css";
 
 function App() {
-  return <Layout />;
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 }
 
 export default App;
