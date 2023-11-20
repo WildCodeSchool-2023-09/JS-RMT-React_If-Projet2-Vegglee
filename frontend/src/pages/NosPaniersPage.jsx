@@ -1,7 +1,6 @@
 import React from "react";
 import Panier from "../components/Panier";
 import "./NosPaniersPage.css";
-
 import baskets from "../assets/basket.json";
 
 function NosPaniersPage() {

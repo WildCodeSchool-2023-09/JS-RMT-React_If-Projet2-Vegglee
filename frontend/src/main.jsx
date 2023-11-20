@@ -36,7 +36,6 @@ const router = createBrowserRouter([
         .catch((err) => {
           console.error(err);
         });
-
       return { paniers, ...params };
     },
   },
