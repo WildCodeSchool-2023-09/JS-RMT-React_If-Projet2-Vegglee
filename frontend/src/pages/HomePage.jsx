@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import LegumeCard from "../components/LegumeCard";
@@ -50,17 +50,10 @@ function HomePage() {
       </div>
       <div className="ctnCard">
         {legumes &&
-          legumes
-            .filter(
-              (legume) =>
-                filter === "" ||
-                legume.categorie.toString() === filter.toString()
-            )
-            .map((legume) => (
-              <Link to={`/vegetables/${legume.id}`} key={legume.id}>
-                <LegumeCard legume={legume} />
-              </Link>
-            ))}
+          legumes.filter(
+            (legume) =>
+              filter === "" || legume.categorie.toString() === filter.toString()
+          )}
       </div>
       <SearchBar setSearchText={setSearchText} />
       <LegumeCard searchText={searchText} />
