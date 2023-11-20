@@ -5,7 +5,6 @@ import "./LegumeCard.css";
 
 function LegumeCard({ searchText }) {
   const [filteredVegetables, setFilteredVegetables] = useState([]);
-
   useEffect(() => {
     const query = searchText !== "" ? `?filter=${searchText}` : "";
 

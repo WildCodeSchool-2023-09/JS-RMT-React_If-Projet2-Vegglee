@@ -70,6 +70,18 @@ router.get("/recipes", (req, res) => {
     });
 });
 
+router.get("/categories", (req, res) => {
+  client
+    .query("SELECT * FROM categorie")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 router.get("/recettes/:id", (req, res) => {
   client
     .query("SELECT * FROM recipe WHERE id = ?", [req.params.id])
