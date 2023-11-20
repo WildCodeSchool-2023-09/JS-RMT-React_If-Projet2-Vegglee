@@ -111,10 +111,17 @@
       Open Sans,
       Arial,
       sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: rgba(0, 111, 11, 1);
     text-decoration: none;
+    font-weight: bolder;
+    transition: color 0.2s;
   }
+  .NavLink a:hover {
+    transition: color 0.2s;
+    color: rgb(255, 187, 0);
+  }
+
   .NavLink a:nth-of-type(4) {
     color: rgba(255, 153, 0, 1);
     border: 1px solid rgba(255, 153, 0, 1);
@@ -124,8 +131,8 @@
   }
 
   .NavBar img {
-    height: 160px;
-    width: 160px;
+    height: 200px;
+    width: 200px;
     margin-left: 120px;
     margin-right: 170px;
   }
