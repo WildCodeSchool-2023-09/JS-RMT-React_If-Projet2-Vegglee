@@ -20,9 +20,8 @@ jobs:
         id: defined
         # perform secret check & put boolean result as an output
         shell: bash
-        run: 
+        run: |
           if [ "${{ secrets.SSH_USER }}" != '' && "${{ secrets.SSH_HOST }}" != '' && "${{ secrets.SSH_PASSWORD }}" != '' ]; then
-            echo "Check are done"
             echo "defined=false" >> $GITHUB_OUTPUT;
           else
             echo "defined=false" >> $GITHUB_OUTPUT;
@@ -30,7 +29,6 @@ jobs:
 
   deploy:
     needs: check-secrets
-    if: needs.check-secrets.outputs.defined == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to VPS
