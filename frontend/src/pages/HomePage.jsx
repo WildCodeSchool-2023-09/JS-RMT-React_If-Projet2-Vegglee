@@ -6,7 +6,7 @@ import SearchBar from "../components/SearchBar";
 function HomePage() {
   const [searchText, setSearchText] = useState("");
   const [categories, setCategories] = useState([]);
-  const [filter, setFilter] = useState(0);
+  const [filter, setFilter] = useState("0");
 
   const fetchCategories = () => {
     axios
