@@ -20,7 +20,7 @@ jobs:
         id: defined
         # perform secret check & put boolean result as an output
         shell: bash
-        run: |
+        run: 
           if [ "${{ secrets.SSH_USER }}" != '' && "${{ secrets.SSH_HOST }}" != '' && "${{ secrets.SSH_PASSWORD }}" != '' ]; then
             echo "Check are done"
             echo "defined=false" >> $GITHUB_OUTPUT;
