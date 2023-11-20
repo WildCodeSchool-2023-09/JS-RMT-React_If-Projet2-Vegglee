@@ -25,7 +25,6 @@ function HomePage() {
 
   return (
     <div>
-      <h1>Mes bios légumes</h1>
       <select name="" id="" onChange={(event) => updateFilter(event)}>
         <option value={0}>tous</option>
         {categories.map((categorie) => (

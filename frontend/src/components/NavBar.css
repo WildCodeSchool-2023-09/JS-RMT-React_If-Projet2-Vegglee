@@ -27,7 +27,7 @@
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) and (max-width: 650px) {
   .NavBar {
     display: flex;
     align-items: center;
@@ -66,7 +66,8 @@
       Open Sans,
       Arial,
       sans-serif;
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: bolder;
     color: rgba(0, 111, 11, 1);
     text-decoration: none;
   }
@@ -78,7 +79,167 @@
     margin-top: -6px;
   }
 }
-@media screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+  .NavBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    position: relative;
+  }
+  .NavBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 111, 11, 1);
+    content: "";
+  }
+  .NavBar img {
+    height: 160px;
+    width: 160px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .NavLink a:nth-of-type(4):hover {
+    background-color: rgba(255, 153, 0, 1);
+    color: white;
+  }
+  .NavLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  .NavLink a {
+    font-family:
+      Open Sans,
+      Arial,
+      sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgba(0, 111, 11, 1);
+    text-decoration: none;
+  }
+  .NavLink a:nth-of-type(4) {
+    color: rgba(255, 153, 0, 1);
+    border: 1px solid rgba(255, 153, 0, 1);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-top: -6px;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1025px) {
+  .NavBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    position: relative;
+  }
+  .NavBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 111, 11, 1);
+    content: "";
+  }
+  .NavBar img {
+    height: 160px;
+    width: 160px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .NavLink a:nth-of-type(4):hover {
+    background-color: rgba(255, 153, 0, 1);
+    color: white;
+  }
+  .NavLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+  }
+  .NavLink a {
+    font-family:
+      Open Sans,
+      Arial,
+      sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgba(0, 111, 11, 1);
+    text-decoration: none;
+  }
+  .NavLink a:nth-of-type(4) {
+    color: rgba(255, 153, 0, 1);
+    border: 1px solid rgba(255, 153, 0, 1);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-top: -6px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1350px) {
+  .NavBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    position: relative;
+  }
+  .NavBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 111, 11, 1);
+    content: "";
+  }
+  .NavBar img {
+    height: 160px;
+    width: 160px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .NavLink a:nth-of-type(4):hover {
+    background-color: rgba(255, 153, 0, 1);
+    color: white;
+  }
+  .NavLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 120px;
+  }
+  .NavLink a {
+    font-family:
+      Open Sans,
+      Arial,
+      sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgba(0, 111, 11, 1);
+    text-decoration: none;
+  }
+  .NavLink a:nth-of-type(4) {
+    color: rgba(255, 153, 0, 1);
+    border: 1px solid rgba(255, 153, 0, 1);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-top: -6px;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
   .NavBar {
     display: flex;
     align-items: center;

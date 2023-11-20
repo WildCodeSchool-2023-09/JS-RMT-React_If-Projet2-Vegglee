@@ -13,6 +13,9 @@ function NavBar() {
         <Link to="/">Home</Link>
         <Link to="/nos-paniers">Nos Paniers</Link>
         <Link to="/recettes">Nos Recettes</Link>
+        <Link to="/formulaire" className="NavLinkForm">
+          Formulaire
+        </Link>
       </div>
     </div>
   );

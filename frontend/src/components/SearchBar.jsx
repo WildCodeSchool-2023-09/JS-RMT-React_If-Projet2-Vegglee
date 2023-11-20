@@ -5,6 +5,7 @@ function SearchBar({ searchText, setSearchText }) {
   return (
     <div className="searchContainer">
       <div className="search-bar">
+        <h2>Mes bios légumes</h2>
         <input
           className="searchInput"
           type="text"
@@ -13,7 +14,6 @@ function SearchBar({ searchText, setSearchText }) {
           onChange={(e) => setSearchText(e.target.value)}
         />
       </div>
-      <h2>Mes bios légumes</h2>
     </div>
   );
 }
