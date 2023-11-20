@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import LegumeCard from "../components/LegumeCard";
 import SearchBar from "../components/SearchBar";
+import "./FilterCategorie.css";
 
 function HomePage() {
   const [searchText, setSearchText] = useState("");
@@ -25,7 +26,12 @@ function HomePage() {
 
   return (
     <div>
-      <select name="" id="" onChange={(event) => updateFilter(event)}>
+      <select
+        className="selectCategorie"
+        name=""
+        id=""
+        onChange={(event) => updateFilter(event)}
+      >
         <option value={0}>tous</option>
         {categories.map((categorie) => (
           <option key={categorie.id} value={categorie.id}>
