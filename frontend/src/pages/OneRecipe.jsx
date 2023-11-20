@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./OneRecipe.css";
+import NavBar from "../components/NavBar";
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ function RecipeDetail() {
 
   return (
     <div>
+      <NavBar />
       {recipe && (
         <>
           <h2 className="recipeName">{recipe.name}</h2>

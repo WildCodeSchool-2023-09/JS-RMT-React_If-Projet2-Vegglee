@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./OneVegetable.css";
+import NavBar from "../components/NavBar";
 
 function VegetableDetail() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ function VegetableDetail() {
 
   return (
     <div>
+      <NavBar />
       {vegetable && (
         <>
           <img src={vegetable.image} alt={vegetable.name} className="bigImg" />

@@ -3,6 +3,7 @@ body {
 }
 
 .bigImg {
+  margin-top: 25px;
   width: 100%;
   object-fit: cover;
   border-radius: 0;
@@ -69,7 +70,7 @@ body {
   transform: translateX(-50%);
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1325px) {
   .bigImg {
     height: 30vh;
   }
@@ -80,12 +81,12 @@ body {
   }
 
   .centeredImage {
-    top: 60%;
+    top: 80%;
     left: 50%;
   }
 
   .name {
-    margin: -100px auto 0 auto;
+    margin: -125px auto 0 auto;
   }
 
   .rectangle {
@@ -111,7 +112,55 @@ body {
   }
 
   .description {
-    bottom: -500px;
+    bottom: -550px;
+    font-size: 20px;
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1325px) {
+  .bigImg {
+    height: 30vh;
+  }
+
+  .smallImg {
+    width: 300px;
+    height: 250px;
+  }
+
+  .centeredImage {
+    top: 90%;
+    left: 50%;
+  }
+
+  .name {
+    margin: -125px auto 0 auto;
+  }
+
+  .rectangle {
+    width: 700px;
+    height: 200px;
+    margin: -100px auto 0 auto;
+  }
+
+  .separate {
+    width: 10px;
+    height: 60px;
+    margin: -140px auto 0 auto;
+  }
+
+  .price {
+    margin: -25px auto 0 -225px;
+    font-size: 25px;
+  }
+
+  .quantity {
+    margin: 25px auto 0 225px;
+    font-size: 25px;
+  }
+
+  .description {
+    bottom: -550px;
     font-size: 20px;
     max-width: 80%;
   }
@@ -128,12 +177,12 @@ body {
   }
 
   .centeredImage {
-    top: 55%;
+    top: 75%;
     left: 50%;
   }
 
   .name {
-    margin: -80px auto 0 auto;
+    margin: -100px auto 0 auto;
     font-size: 20px;
   }
 
@@ -177,12 +226,12 @@ body {
   }
 
   .centeredImage {
-    top: 40%;
+    top: 65%;
     left: 50%;
   }
 
   .name {
-    margin: -60px auto 0 auto;
+    margin: -80px auto 0 auto;
     font-size: 17px;
   }
 
