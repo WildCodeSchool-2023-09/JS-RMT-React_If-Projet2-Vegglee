@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import Logo from "../assets/Logo.Vegglee.jpg";
+import Logo from "../assets/logo.vegglee.jpg";
+import MenuBurger from "./MenuBurger";
 
 function NavBar() {
   return (
@@ -12,6 +13,9 @@ function NavBar() {
       <div className="NavLink">
         <Link to="/">Home</Link>
         <Link to="/nos-paniers">Nos paniers</Link>
+      </div>
+      <div className="burgerVisible">
+        <MenuBurger />
       </div>
     </div>
   );
