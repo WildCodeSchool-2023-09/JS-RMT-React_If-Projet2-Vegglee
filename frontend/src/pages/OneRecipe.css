@@ -34,10 +34,14 @@
   font-weight: bolder;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 0;
   background-color: green;
   width: 325px;
   height: 60px;
+}
+
+.recipeCook {
+  margin-bottom: 60rem;
 }
 
 .recipeIngredient:first-child {

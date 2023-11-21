@@ -39,6 +39,10 @@
   height: 310px;
   object-fit: cover;
 }
+
+.DescriptionPanier {
+  margin-bottom: 10rem;
+}
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .table > div {
     width: 100%;

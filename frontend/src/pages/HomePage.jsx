@@ -3,6 +3,8 @@ import axios from "axios";
 import LegumeCard from "../components/LegumeCard";
 import SearchBar from "../components/SearchBar";
 import "./FilterCategorie.css";
+import Baclground from "../components/Baclground";
+import Advice from "../components/Advice";
 
 function HomePage() {
   const [searchText, setSearchText] = useState("");
@@ -26,6 +28,8 @@ function HomePage() {
 
   return (
     <div>
+      <Baclground />
+      <Advice />
       <SearchBar setSearchText={setSearchText} />
       <select
         className="selectCategorie"

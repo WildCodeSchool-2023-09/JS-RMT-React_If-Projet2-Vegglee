@@ -1,21 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../assets/logo_vegglee.jpg";
+import Logo from "../assets/logo_vegglee.jpg";
+import MenuBurger from "./MenuBurger";
 
 function NavBar() {
   return (
     <div className="NavBar">
-      <Link to="/">
-        <img src={logo} alt="Logo Vegglee" />
-      </Link>
+      <div className="Logo">
+        <img src={Logo} alt="Logo" />
+      </div>
       <div className="NavLink">
         <Link to="/">Home</Link>
-        <Link to="/nos-paniers">Nos Paniers</Link>
-        <Link to="/recettes">Nos Recettes</Link>
-        <Link to="/formulaire" className="NavLinkForm">
-          S'inscire
-        </Link>
+        <Link to="/nos-paniers">Nos paniers</Link>
+        <Link to="/recettes">Nos recettes</Link>
+        <Link to="/Formulaire">S'inscrire</Link>
+      </div>
+      <div className="burgerVisible">
+        <MenuBurger />
       </div>
     </div>
   );

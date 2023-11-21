@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 12rem;
+  margin-top: 3rem;
 }
 
 .linkVegetableCard {

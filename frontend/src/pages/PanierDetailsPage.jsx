@@ -2,7 +2,6 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import "./PanierDetailsPage.css";
 import baskets from "../assets/basket.json";
-import NavBar from "../components/NavBar";
 
 function PanierDetailsPage() {
   const { paniers, type } = useLoaderData();
@@ -10,7 +9,6 @@ function PanierDetailsPage() {
 
   return (
     <div>
-      <NavBar />
       <div className="ContainerPanier">
         <div className="TitlePanier">
           <h1>{info.titre}</h1>

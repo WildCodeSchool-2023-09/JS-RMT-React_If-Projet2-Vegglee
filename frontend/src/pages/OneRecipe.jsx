@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./OneRecipe.css";
-import NavBar from "../components/NavBar";
 
 function RecipeDetail() {
   const { id } = useParams();
@@ -22,7 +21,6 @@ function RecipeDetail() {
 
   return (
     <div>
-      <NavBar />
       {recipe && (
         <>
           <h2 className="recipeName">{recipe.name}</h2>
@@ -42,12 +40,14 @@ function RecipeDetail() {
               Préparation : {recipe.preparation} | Cuisson : {recipe.cooking}
             </h3>
           </div>
-          <div className="cookingRecipe">
-            {recipe.cookingRecipe.split("|").map((cookingRecipe) => (
-              <p key={cookingRecipe} className="cookingRecipe">
-                {cookingRecipe}
-              </p>
-            ))}
+          <div className="recipeCook">
+            <div className="cookingRecipe">
+              {recipe.cookingRecipe.split("|").map((cookingRecipe) => (
+                <p key={cookingRecipe} className="cookingRecipe">
+                  {cookingRecipe}
+                </p>
+              ))}
+            </div>
           </div>
         </>
       )}

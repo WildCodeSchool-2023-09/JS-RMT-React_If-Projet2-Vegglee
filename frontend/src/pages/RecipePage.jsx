@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 import "./RecipePage.css";
-import NavBar from "../components/NavBar";
 
 function RecipePage() {
   const [recipe, setRecipe] = useState([]);
@@ -23,7 +22,6 @@ function RecipePage() {
 
   return (
     <div>
-      <NavBar />
       <h1 className="titleRecipe">Nos recettes ! </h1>
       <div className="containerRecipe">
         {recipe.map((recipeItem) => (

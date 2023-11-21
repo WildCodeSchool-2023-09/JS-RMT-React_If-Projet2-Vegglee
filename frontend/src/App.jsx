@@ -1,15 +1,11 @@
-import HomePage from "./pages/HomePage";
-import NavBar from "./components/NavBar";
-
 import "./App.css";
+import Layout from "./Layout";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <HomePage />
+      <Layout />
     </div>
   );
 }
-
 export default App;

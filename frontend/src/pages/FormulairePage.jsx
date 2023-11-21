@@ -1,10 +1,8 @@
 import "./FormulairePage.css";
-import NavBar from "../components/NavBar";
 
 function Formulaire() {
   return (
     <div>
-      <NavBar />
       <div className="FormulaireContainer">
         <div>
           <h4 className="FormulaireH4">Nous Rejoindre ! </h4>
