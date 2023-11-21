@@ -14,6 +14,9 @@ function MenuBurger() {
         <Link to="/nos-paniers" className="menu-items">
           Nos paniers
         </Link>
+        <Link to="/recettes" className="menu-items">
+          Nos Recettes
+        </Link>
       </Menu>
     </div>
   );

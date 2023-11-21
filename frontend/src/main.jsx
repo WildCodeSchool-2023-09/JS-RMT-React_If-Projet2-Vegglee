@@ -10,6 +10,7 @@ import Formulaire from "./pages/FormulairePage";
 import Layout from "./Layout";
 import HomePage from "./pages/HomePage";
 import RecipeDetail from "./pages/OneRecipe";
+import Error from "./components/Error";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "nos-paniers", element: <NosPaniersPage /> },
       { path: "formulaire", element: <Formulaire /> },
       { path: "/recettes/:id", element: <RecipeDetail /> },
+      { path: "*", element: <Error /> },
       {
         path: "nos-paniers/:type",
         element: <PanierDetailsPage />,
