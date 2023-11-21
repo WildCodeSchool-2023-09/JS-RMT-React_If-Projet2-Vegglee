@@ -11,11 +11,16 @@ import RecipeDetail from "./pages/OneRecipe";
 import HomePage from "./pages/HomePage";
 import FormulairePage from "./pages/FormulairePage";
 import PanierDetailsPage from "./pages/PanierDetailsPage";
+import Error from "./components/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "*",
+    element: <Error />,
   },
   {
     path: "/home",
