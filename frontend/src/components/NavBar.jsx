@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import Logo from "../assets/Logo.Vegglee.jpg";
+import Logo from "../assets/favicon.jpg";
 
 function NavBar() {
   return (
