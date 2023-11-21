@@ -14,7 +14,7 @@ function NavBar() {
         <Link to="/nos-paniers">Nos Paniers</Link>
         <Link to="/recettes">Nos Recettes</Link>
         <Link to="/formulaire" className="NavLinkForm">
-          Formulaire
+          S'inscire
         </Link>
       </div>
     </div>

@@ -16,7 +16,7 @@ router.get("/vegetables", (req, res) => {
     query += " WHERE name LIKE ?";
     params = [`%${req.query.filter}%`];
   } else {
-    query += " LIMIT 15";
+    query += " LIMIT 50";
   }
 
   client

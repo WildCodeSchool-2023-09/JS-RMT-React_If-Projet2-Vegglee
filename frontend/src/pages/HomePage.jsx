@@ -26,7 +26,6 @@ function HomePage() {
 
   return (
     <div>
-      {" "}
       <SearchBar setSearchText={setSearchText} />
       <select
         className="selectCategorie"
