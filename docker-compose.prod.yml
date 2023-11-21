@@ -17,9 +17,9 @@ services:
       VITE_BACKEND_URL: "https://${PROJECT_NAME}.${HOST}:3310"
       DB_HOST: ${DATABASE_SUBDOMAIN_NAME}-db
       DB_PORT: 3306
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${USER_NAME}
-      DB_NAME: ${USER_PASSWORD}
+      DB_USER: ${USER_NAME}
+      DB_PASSWORD: ${USER_PASSWORD}
+      DB_NAME: ${DB_NAME}
     networks:
       - proxy
     labels:
