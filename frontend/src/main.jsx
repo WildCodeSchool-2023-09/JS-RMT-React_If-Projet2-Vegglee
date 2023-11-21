@@ -8,7 +8,6 @@ import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import NosPaniersPage from "./pages/NosPaniersPage";
 import RecipeDetail from "./pages/OneRecipe";
-import HomePage from "./pages/HomePage";
 import FormulairePage from "./pages/FormulairePage";
 import PanierDetailsPage from "./pages/PanierDetailsPage";
 
@@ -16,10 +15,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/home",
-    element: <HomePage />,
+    loader: () => {
+      return axios
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/vegetables`)
+        .then((res) => res.data)
+        .catch((err) => console.error(err));
+    },
   },
   {
     path: "/formulaire",

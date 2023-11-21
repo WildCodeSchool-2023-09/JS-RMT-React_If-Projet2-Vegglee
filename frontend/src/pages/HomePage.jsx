@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import LegumeCard from "../components/LegumeCard";
 import SearchBar from "../components/SearchBar";
 
 function HomePage() {
   const [searchText, setSearchText] = useState("");
+  const legumes = useLoaderData();
   return (
     <div>
       <Link to="/formulaire">Formulaire</Link>
