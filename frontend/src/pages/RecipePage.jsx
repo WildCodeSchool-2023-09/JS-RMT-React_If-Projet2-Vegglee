@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 import RecipeCard from "../components/RecipeCard";
 import "./RecipePage.css";
@@ -23,7 +25,9 @@ function RecipePage() {
       <h1 className="titleRecipe">Nos recettes ! </h1>
       <div className="containerRecipe">
         {recipe.map((recipeItem) => (
-          <RecipeCard key={recipeItem.id} recipe={recipeItem} />
+          <Link to={`/recettes/${recipeItem.id}`} key={recipeItem.id}>
+            <RecipeCard key={recipeItem.id} recipe={recipeItem} />
+          </Link>
         ))}
       </div>
     </div>
