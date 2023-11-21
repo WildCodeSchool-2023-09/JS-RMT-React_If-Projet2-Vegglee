@@ -15,11 +15,11 @@ services:
       APP_SECRET: 123456789
       FRONTEND_URL: "https://${PROJECT_NAME}.${HOST}"
       VITE_BACKEND_URL: "https://${PROJECT_NAME}.${HOST}:3310"
-      DB_HOST: database-db
+      DB_HOST: ${DATABASE_SUBDOMAIN_NAME}-db
       DB_PORT: 3306
       DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_NAME: ${DB_NAME}
+      DB_PASSWORD: ${USER_NAME}
+      DB_NAME: ${USER_PASSWORD}
     networks:
       - proxy
     labels:
