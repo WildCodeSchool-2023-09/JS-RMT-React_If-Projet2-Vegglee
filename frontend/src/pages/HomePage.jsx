@@ -8,6 +8,7 @@ function HomePage() {
   const [searchText, setSearchText] = useState("");
   return (
     <div>
+
       <Baclground />
       <Advice />
       <SearchBar setSearchText={setSearchText} />
