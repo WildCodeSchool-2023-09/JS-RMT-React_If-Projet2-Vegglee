@@ -1,15 +1,10 @@
-import HomePage from "./pages/HomePage";
-import FormulairePage from "./pages/FormulairePage";
-import NavBar from "./components/NavBar";
-
 import "./App.css";
+import Layout from "./Layout";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <HomePage />
-      <FormulairePage />
+      <Layout />
     </div>
   );
 }

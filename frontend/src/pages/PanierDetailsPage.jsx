@@ -29,5 +29,4 @@ function PanierDetailsPage() {
     </div>
   );
 }
-
 export default PanierDetailsPage;
