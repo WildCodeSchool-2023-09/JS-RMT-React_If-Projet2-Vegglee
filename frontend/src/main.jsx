@@ -11,6 +11,7 @@ import Layout from "./Layout";
 import HomePage from "./pages/HomePage";
 import RecipeDetail from "./pages/OneRecipe";
 import Error from "./components/Error";
+import NosProducteurs from "./pages/NosProducteurs";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "formulaire", element: <Formulaire /> },
       { path: "/recettes/:id", element: <RecipeDetail /> },
       { path: "*", element: <Error /> },
+      { path: "nos-producteurs", element: <NosProducteurs /> },
       {
         path: "nos-paniers/:type",
         element: <PanierDetailsPage />,

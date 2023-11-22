@@ -17,6 +17,9 @@ function MenuBurger() {
         <Link to="/recettes" className="menu-items">
           Nos Recettes
         </Link>
+        <Link to="/nos-producteurs" className="menu-items">
+          Nos Producteurs
+        </Link>
       </Menu>
     </div>
   );

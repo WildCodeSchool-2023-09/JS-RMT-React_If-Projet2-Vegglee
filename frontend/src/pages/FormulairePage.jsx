@@ -1,9 +1,11 @@
 import "./FormulairePage.css";
+import Logo from "../assets/logo_vegglee.jpg";
 
 function Formulaire() {
   return (
     <div>
       <div className="FormulaireContainer">
+        <img src={Logo} alt="logo" className="FormulaireLogo" />
         <div>
           <h4 className="FormulaireH4">Nous Rejoindre ! </h4>
         </div>
