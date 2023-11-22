@@ -5,12 +5,9 @@ import axios from "axios";
 import VegetableDetail from "./pages/OneVegetable";
 import RecipePage from "./pages/RecipePage";
 import NosPaniersPage from "./pages/NosPaniersPage";
-import RecipeDetail from "./pages/OneRecipe";
 import HomePage from "./pages/HomePage";
-import FormulairePage from "./pages/FormulairePage";
 import PanierDetailsPage from "./pages/PanierDetailsPage";
 import Layout from "./Layout";
-import HomePage from "./pages/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +34,6 @@ const router = createBrowserRouter([
         },
       },
     ],
-
   },
 ]);
 

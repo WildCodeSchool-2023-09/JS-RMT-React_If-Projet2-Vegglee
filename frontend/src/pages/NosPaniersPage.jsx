@@ -6,7 +6,6 @@ import baskets from "../assets/basket.json";
 function NosPaniersPage() {
   return (
     <div className="fondPage">
-      <NavBar />
       <h1 className="titreNosPaniers">Nos Paniers</h1>
       <div className="nosPaniers">
         {baskets.map((basket) => (
