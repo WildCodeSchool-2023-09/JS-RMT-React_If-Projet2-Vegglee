@@ -1,0 +1,40 @@
+.selectCategorie {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  height: 25px;
+  width: 150px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Style du selecteur quand survolé */
+.selectCategorie:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Style du selecteur quand en focus (après avoir cliqué) */
+.selectCategorie:focus {
+  background-color: black;
+  color: white;
+}
+
+/* Style des options par défaut */
+.selectCategorie option {
+  background-color: white;
+  color: black;
+}
+
+/* Style des options quand survolées */
+.selectCategorie option:hover {
+  background-color: black;
+  color: white;
+}

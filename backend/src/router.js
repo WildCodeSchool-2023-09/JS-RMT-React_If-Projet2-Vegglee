@@ -16,7 +16,7 @@ router.get("/vegetables", (req, res) => {
     query += " WHERE name LIKE ?";
     params = [`%${req.query.filter}%`];
   } else {
-    query += " LIMIT 15";
+    query += " LIMIT 25";
   }
 
   client
@@ -61,6 +61,18 @@ router.get("/vegetables/:id", (req, res) => {
 router.get("/recipes", (req, res) => {
   client
     .query("SELECT * FROM recipe LIMIT 8")
+    .then((result) => {
+      res.status(200).json(result[0]);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
+router.get("/categories", (req, res) => {
+  client
+    .query("SELECT * FROM categorie")
     .then((result) => {
       res.status(200).json(result[0]);
     })

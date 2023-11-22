@@ -1,0 +1,76 @@
+.producteur {
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-weight: bolder;
+  margin-top: 80px;
+}
+
+.allProducteur {
+  display: flex;
+  justify-content: center;
+}
+
+.oneProducteur {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.producteurWeek {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.imgProducteur {
+  object-fit: cover;
+  width: 300px;
+  height: 400px;
+}
+
+.imgCtnProducteur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.textCtnProducteur {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 20rem;
+}
+
+.allProduct {
+  background-color: rgb(0, 61, 0);
+  color: white;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+  .imgCtnProducteur {
+    justify-content: center; /* Centrer les éléments sur les écrans plus petits */
+  }
+
+  .producteur {
+    margin-top: 200px;
+  }
+}
+
+.imgContainer {
+  text-align: center; /* Centrer le texte sous l'image */
+  margin-bottom: 20px; /* Espacement entre les images et les textes */
+}
+
+.imgProducteur {
+  max-width: 100%; /* Assurez-vous que les images ne dépassent pas leur taille originale */
+}
+
+.imgText {
+  margin-top: 10px; /* Espacement entre l'image et le texte */
+}
