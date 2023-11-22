@@ -10,3 +10,9 @@
   justify-content: center;
   margin-bottom: 12rem;
 }
+
+@media screen and (max-width: 600px) {
+  .titleRecipe {
+    margin-top: 150px;
+  }
+}

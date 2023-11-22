@@ -43,6 +43,13 @@
 .DescriptionPanier {
   margin-bottom: 10rem;
 }
+
+@media screen and (max-width: 600px) {
+  .TitlePanier {
+    margin-top: 150px;
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .table > div {
     width: 100%;

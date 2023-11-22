@@ -87,7 +87,23 @@
   transform: translateX(-50%);
 }
 
+@media only screen and (min-width: 1000px) {
+  .recipeCook {
+    margin-bottom: 100rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recipeName {
+    margin-top: 150px;
+  }
+}
+
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .recipeCook {
+    margin-bottom: 50em;
+  }
+
   .recipeName {
     font-size: 30px;
   }

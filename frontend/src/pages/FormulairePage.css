@@ -16,10 +16,11 @@
   align-items: center;
   text-align: center;
   font-family: "Lilita One", sans-serif;
-  position: absolute;
+  position: relative;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 500px;
 }
 
 .FormulaireForm {
@@ -72,8 +73,4 @@ body {
   font-size: 18px;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-div {
-  padding-bottom: 1rem;
 }

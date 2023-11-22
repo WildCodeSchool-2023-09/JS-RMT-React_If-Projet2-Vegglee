@@ -33,10 +33,76 @@
   .NavBar {
     position: fixed;
     z-index: 3;
+    box-sizing: border-box;
+    top: 0%;
+  }
+
+  .NavBar img {
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+    margin-right: 30px;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
+  .burgerVisible {
+    display: none;
+  }
+
+  .NavBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    position: relative;
+  }
+  .NavBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 111, 11, 1);
+    content: "";
+  }
+  .NavLink a:nth-of-type(5):hover {
+    background-color: rgba(255, 153, 0, 1);
+    color: white;
+  }
+  .NavLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .NavLink a {
+    font-family:
+      Open Sans,
+      Arial,
+      sans-serif;
+    font-size: 10px;
+    color: rgba(0, 111, 11, 1);
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  .NavLink a:nth-of-type(5) {
+    color: rgba(255, 153, 0, 1);
+    border: 1px solid rgba(255, 153, 0, 1);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-top: -6px;
+  }
+  .NavBar img {
+    height: 120px;
+    width: 120px;
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
   .burgerVisible {
     display: none;
   }
@@ -92,7 +158,7 @@
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1200px) {
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
   .burgerVisible {
     display: none;
   }
@@ -148,7 +214,62 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  .burgerVisible {
+    display: none;
+  }
+  .NavBar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    position: relative;
+  }
+  .NavBar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 111, 11, 1);
+    content: "";
+  }
+  .NavLink a:nth-of-type(5):hover {
+    background-color: rgba(255, 153, 0, 1);
+    color: white;
+  }
+  .NavLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+  }
+  .NavLink a {
+    font-family:
+      Open Sans,
+      Arial,
+      sans-serif;
+    font-size: 14px;
+    color: rgba(0, 111, 11, 1);
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  .NavLink a:nth-of-type(5) {
+    color: rgba(255, 153, 0, 1);
+    border: 1px solid rgba(255, 153, 0, 1);
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-top: -6px;
+  }
+  .NavBar img {
+    height: 160px;
+    width: 160px;
+    margin-left: 100px;
+    margin-right: 60px;
+  }
+}
+@media screen and (min-width: 1500px) {
   .burgerVisible {
     display: none;
   }

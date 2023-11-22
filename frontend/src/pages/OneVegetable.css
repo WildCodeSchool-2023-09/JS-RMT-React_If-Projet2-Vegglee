@@ -86,7 +86,7 @@ body {
   }
 
   .name {
-    margin: -125px auto 0 auto;
+    margin: -100px auto 0 auto;
   }
 
   .rectangle {
@@ -129,12 +129,12 @@ body {
   }
 
   .centeredImage {
-    top: 90%;
+    top: 80%;
     left: 50%;
   }
 
   .name {
-    margin: -125px auto 0 auto;
+    margin: -100px auto 0 auto;
   }
 
   .rectangle {
@@ -177,12 +177,12 @@ body {
   }
 
   .centeredImage {
-    top: 75%;
+    top: 70%;
     left: 50%;
   }
 
   .name {
-    margin: -100px auto 0 auto;
+    margin: -80px auto 0 auto;
     font-size: 20px;
   }
 
@@ -226,12 +226,12 @@ body {
   }
 
   .centeredImage {
-    top: 65%;
+    top: 42%;
     left: 50%;
   }
 
   .name {
-    margin: -80px auto 0 auto;
+    margin: -60px auto 0 auto;
     font-size: 17px;
   }
 
