@@ -33,7 +33,7 @@ const router = createBrowserRouter([
           return { paniers, ...params };
         },
       },
-    ],
+    ]
   },
 ]);
 

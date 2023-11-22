@@ -1,4 +1,4 @@
-import Logo from "../assets/Logo.Vegglee.jpg";
+import Logo from "../assets/favicon.svg";
 import "./FormulairePage.css";
 
 function Formulaire() {
