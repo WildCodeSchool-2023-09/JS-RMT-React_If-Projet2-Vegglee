@@ -28,13 +28,18 @@
 }
 
 @media screen and (min-width: 600px) {
+  .burgerVisible {
+    display: none;
+  }
   .NavBar {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     background-color: white;
     height: 120px;
     width: 100%;
     position: relative;
+    gap: 60px;
   }
   .NavBar::after {
     content: "";
@@ -59,7 +64,7 @@
   .NavLink {
     display: flex;
     justify-content: space-around;
-    gap: 40px;
+    gap: 70px;
   }
   .NavLink a {
     font-family:
@@ -79,6 +84,9 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .burgerVisible {
+    display: none;
+  }
   .NavBar {
     display: flex;
     align-items: center;
