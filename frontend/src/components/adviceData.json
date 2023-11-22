@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "image": "src/assets/advice1.jpg",
+    "image": "/assets/advice1.jpg",
     "title": "Produits locaux",
     "text": "Nos produits sont issus des meilleures récoltes."
   },
   {
     "id": 2,
-    "image": "src/assets/advice2.jpg",
+    "image": "/assets/advice2.jpg",
     "title": "Produits frais",
     "text": "Conservés dans les meilleures conditions possibles."
   },
   {
     "id": 3,
-    "image": "src/assets/advice3.jpg",
+    "image": "/assets/advice3.jpg",
     "title": "Service de qualité",
     "text": "Des primeurs spécialisés et formés pour vous."
   },
   {
     "id": 4,
-    "image": "src/assets/advice4.jpg",
+    "image": "/assets/advice4.jpg",
     "title": "Primeurs de proximité",
     "text": "La convivialité, l'écoute et l'échange avec nos clients."
   }

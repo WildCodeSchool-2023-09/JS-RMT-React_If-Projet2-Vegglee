@@ -6,8 +6,18 @@
 
 @media screen and (min-width: 500px) {
   .bigBackground {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900) {
+  .bigBackground {
     height: 350px;
     width: 100%;
     object-fit: cover;
+    margin-top: 18px;
   }
 }
