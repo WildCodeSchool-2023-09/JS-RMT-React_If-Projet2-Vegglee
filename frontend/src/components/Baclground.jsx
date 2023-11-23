@@ -1,13 +1,10 @@
 import React from "react";
 import "./background.css";
+import backgroundVegetable from "../assets/backgroundVegetable.jpg";
 
 function Baclground() {
   return (
-    <img
-      className="bigBackground"
-      src="src\assets\backgroundVegetable.jpg"
-      alt="vegetables"
-    />
+    <img className="bigBackground" src={backgroundVegetable} alt="vegetables" />
   );
 }
 
